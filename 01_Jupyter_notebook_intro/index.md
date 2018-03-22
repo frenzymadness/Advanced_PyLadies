@@ -56,7 +56,7 @@ jej přímo bez aktivovaného virtuálního prostředí.
 Do příkazové řádky zadej následující příkaz:
 
 ```shell
-python3 -m pip install jupyter
+python3 -m pip install --user jupyter
 ```
 
 > Používáš-li Windows, budeš muset pravděpodobně na začátku příkazu použít místo
@@ -148,6 +148,9 @@ do modrého režimu pomocí klávesy `Esc`.
 Pro ovládání Notebooku je dobré se naučit klávesvé zkratky, které práci s ním
 usnadní a zrychlí. Jejich seznam je možné zobrazit pomocí klávesy `h`.
 
+> Klávesové zkratky se používají v modrém režimu, jinak bychom místo
+speciálních akcí psali jednotlivé znaky do buněk.
+
 Mezi ty nejdůležitější patří:
 
 * `h` zobrazí nápovědu
@@ -160,6 +163,9 @@ Mezi ty nejdůležitější patří:
 * `Ctrl` + `s` uloží dokument
 * `m` přepne buňku z Python kódu na text
 
+**Nejdůležitější klávesová zkratka** je hned ta první - `h` - s její pomocí
+se totiž velice rychle dostanete k seznamu všech ostatních.
+
 ## Typy obsahu
 
 Základním typem buňky je buňka s programem, která umí úplně vše co z Pythonu
@@ -169,7 +175,7 @@ už znáš.
 
 ### Text
 
-Stiskem klávesy `m` můžeme buňku přepnout z režimu Python kódu do režimu
+Stiskem klávesy `m` (v modrém režimu) můžeme buňku přepnout z režimu Python kódu do režimu
 textu, který nám umožní dokumenty obohatit o spoustu různého obsahu. Že je buňka
 v textovém režimu poznáme podle toho, že nalevo od ní už nebude modré označení
 `In [ ]`. Zatímco u buňek s Pythonem se nám po spuštění programu výsledek vypíše
@@ -196,6 +202,10 @@ závorek na začátek se napíše text odkazu a do kulatých závorek pak cestak
 či URL adresa.
 * Obrázky vypadají téměř stejně jako odkazy, jen mají na začátku před první
 hranatou závorkou vykřičník: `![logo pythonu](static/python_logo.py)`
+
+Tímto způsobem jednoduše formátovaný text by mohl vypadat následovně:
+
+![markdown source](static/markdown_source.png)
 
 Výsledek takového formátování pak může po spuštění buňek vypadat například
 takto:

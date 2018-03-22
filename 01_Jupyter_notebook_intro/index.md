@@ -121,7 +121,7 @@ po spuštění buňky hned pod ní. Pro výstup to ale platí, jen pokud je na p
 
 ![ukázka výstupů](static/outputs.png)
 
-Funguje to jako klasický program, takže zálěží na pořadí v jakém se jednotlivé
+Funguje to jako klasický program, takže záleží na pořadí v jakém se jednotlivé
 buňky provedly. Musíš například nejdříve uložit nějaký obsah do proměnné, než ji
 budeš moci použít. Tohle pravidlo je důležité mít na paměti, protože buňky
 v Notebooku se dají spouštět nezávisle na sobě v libovolném pořadí. V jakém

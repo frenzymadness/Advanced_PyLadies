@@ -3,10 +3,10 @@
 Jupyter Notebook je webový editor sloužící k vytváření komplexních dokumentů,
 které mohou mimo strukturovaného textu a obrázků obsahovat také
 kód ([nejen v Pythonu](https://github.com/jupyter/jupyter/wiki/Jupyter-kernels)),
-grafy, matematické vzorce (LaTex) a další interaktivní prvky.
+grafy, matematické vzorce (LaTeX) a další interaktivní prvky.
 
 Z jiného pohledu se jedná o velmi praktickou konzoli pro Python, kde je veškerá
-historie uložena a dá se k ní vrátit nebo ji změnit a tím ovlivnit zbytek
+historie uložena a dá se k ní vrátit nebo ji změnit, a tím ovlivnit zbytek
 výpočtů.
 
 Jupyter Notebook se hodí všude tam, kde potřebuješ ihned vidět výsledky
@@ -20,7 +20,7 @@ vybrat hned z několika možností.
 
 ### Windows
 
-Pokud už máš instalovaný Python 3 a vše bez potíží funguje, použíj pro instalaci
+Pokud už máš instalovaný Python 3 a vše bez potíží funguje, použij pro instalaci
 Jupyter Notebooku [standardní cestu instalace balíčků pro Python](#instalace-pomocí-pipu).
 
 Na Windows je možné nainstalovat Jupyter Notebook i jako součást distribuce
@@ -48,7 +48,7 @@ instalovat do virtuálního prostředí, přejdi na [další kapitolu](#instalac
 ### Instalace pomocí PIPu
 
 Pokud máš Python 3 již nainstalovaný, můžeš pro instalaci balíčků použít jeho
-modul jménem `pip`. Instalovat je možné buď přímo do systému nebo do konkrétního
+modul jménem `pip`. Instalovat je možné buď přímo do systému, nebo do konkrétního
 virtuálního prostředí. Abychom si ušetřili práci při spouštění notebooku
 a abychom jej také měli k dispozici pro všechny naše projekty, nainstalujeme si
 jej přímo bez aktivovaného virtuálního prostředí.
@@ -85,47 +85,47 @@ a pokračovat v práci.
 
 Nový dokument vytvoříš tak, že si vpravo nahoře klikneš na `New` > `Python 3`.
 Touto volbou vybereš Python 3 jako jazyk, který budeš v rámci dokumentu používat.
-Notebook jich zvládne daleko více a tak si na své příjdou úplně všichni.
+Notebook jich zvládne daleko více a tak si na své přijdou úplně všichni.
 
 ## Uživatelské rozhraní
 
 ![Notebook UI](static/jupyter_notebook_new.png)
 
 Notebook nemá nijak složité rozhraní. Na prvním řádku najdeš informaci o názvu
-dokumentu a posledním uložení, pod tím pak ovládací prvky a hlavní nabídku
-a ještě kousek níže pak prázdnou buňku čekající na první obsah.
+dokumentu a posledním uložení, pod tím pak ovládací prvky a hlavní nabídku.
+Ještě kousek níže pak prázdnou buňku čekající na první obsah.
 
-Vpravo vedle nápisu Python 3 je malé ale užitečné kolečko. Pokud nám během práce
+Vpravo vedle nápisu "Python 3" je malé, ale užitečné kolečko. Pokud nám během práce
 zčerná, znamená to, že je Python zaneprázdněn vykonáváním našich příkazů a je
-třeba počkat až jejich provádění dokončí a nebo, pokud jsi například omylem
-vytvořil nekonečný cyklus, Python (neboli kernel) restartovat.
+třeba počkat až jejich provádění dokončí, anebo, pokud jsi například omylem
+vytvořil nekonečný cyklus, že je třeba Python (neboli kernel) restartovat.
 
 ## Základní použití
 
 Jako první krok si nový dokument přejmenuj. Klikni na prvním řádku na nápis
-`Utilited` a zvol si nějaké smysluplné jméno.
+"Untitled" a zvol si nějaké smysluplné jméno.
 
 Teď zkus do první buňky napsat nějaký příkaz v Pythonu a stisknout klávesovou
 zkratku `Shift` + `Enter`.
 
 > Do jedné buňky lze zapsat libovolně velký kus kódu i s prázdnými řádky, proto
-se k jeho spuštění musí použít klávesová zkratka místo pouhého Enteru.
+se k jeho spuštění musí místo pouhého Enteru použít klávesová zkratka.
 Smysluplnější je ale dělit kód po menších částech, aby se dal lépe kontrolovat.
 
 ![první příkaz](static/first_command.png)
 
 Podobně můžeš pokračovat i dále. Vždy do buňky vložíš nějaký kód a pak jej
 spustíš. Pokud buňka obsahuje nějaký výstup nebo něco vrací, ukáže se výsledek
-po spuštění buňky hned pod ní. Pro výstup to ale platí jen pokud je na posledním
+po spuštění buňky hned pod ní. Pro výstup to ale platí, jen pokud je na posledním
 řádku buňky, zatímco `print` může být v buňce kdekoli.
 
 ![ukázka výstupů](static/outputs.png)
 
 Funguje to jako klasický program, takže zálěží na pořadí v jakém se jednotlivé
-buňky provedly. Musíš například nejdříve uložit nějaký obsah do proměnné než ji
+buňky provedly. Musíš například nejdříve uložit nějaký obsah do proměnné, než ji
 budeš moci použít. Tohle pravidlo je důležité mít na paměti, protože buňky
-v Notebooku se dají spouštět nezávisle na sobě v libovolném pořadí. V jákem
-pořadí k jejich spuštění došlo se dá zjistit z čísel, které se po spuštění
+v Notebooku se dají spouštět nezávisle na sobě v libovolném pořadí. V jakém
+pořadí k jejich spuštění došlo, se dá zjistit z čísel, která se po spuštění
 objeví nalevo. Pokud se po spuštění místo čísla objeví `*`, znamená to, že
 Python pracuje a na výsledek si budeme muset chvilku počkat.
 
@@ -134,7 +134,7 @@ Takhle to může vypadat, pokud se správné pořadí nedodrží:
 ![špatné pořadí spuštění buňek](static/wrong_order.png)
 
 > I když to není nutnost, bývá zvykem psát dokumenty v Notebooku tak, aby se
-buňky daly spustit v pořadí ve kterém jdou za sebou. Když jej pak někomu pošleš,
+buňky daly spustit v pořadí, ve kterém jdou za sebou. Když jej pak někomu pošleš,
 bude si moci snadno spustit tvůj kód kousek po kousku a sledovat, co se v něm
 děje. Mimoto je v hlavní nabídce i možnost `Kernel` > `Restart & Run All`, která
 restartuje Python a následně spustí všechny buňky v dokumentu.
@@ -142,10 +142,10 @@ restartuje Python a následně spustí všechny buňky v dokumentu.
 Všimni si, jak buňky měni barvu. Pokud je okraj buňky zelený, je možné ji
 editovat a pomocí šipek se pohybovat v kódu, který obsahuje. Pokud je modrý, dá
 se šipkami přecházet mezi jednotlivými buňkami. Z modrého do zeleného režimu
-se dostaneme klávesou `Enter` případně kliknutím do buňky. Naopak ze zeleného
+se dostaneme klávesou `Enter`, případně kliknutím do buňky. Naopak ze zeleného
 do modrého režimu pomocí klávesy `Esc`.
 
-Pro ovládání Notebooku je dobré se naučit klávesvé zkratky, které práci s ním
+Pro ovládání Notebooku je dobré se naučit klávesové zkratky, které práci s ním
 usnadní a zrychlí. Jejich seznam je možné zobrazit pomocí klávesy `h`.
 
 Mezi ty nejdůležitější patří:
@@ -153,12 +153,12 @@ Mezi ty nejdůležitější patří:
 * `h` zobrazí nápovědu
 * `a` vloží novou buňku nad aktuální
 * `b` vloží buňku pod aktuální
-* `x` výjme buňku
+* `x` vyjme buňku
 * `c` kopíruje buňku
 * `v` vloží kopírovanou nebo vyjmutou buňku pod aktuální
 * `Shift` + `v` vloží kopírovanou nebo vyjmutou buňku nad aktuální
 * `Ctrl` + `s` uloží dokument
-* `m` přepne buňku z Python kódu na text
+* `m` přepne buňku z pythonového kódu na text
 
 ## Typy obsahu
 
@@ -169,7 +169,7 @@ už znáš.
 
 ### Text
 
-Stiskem klávesy `m` můžeme buňku přepnout z režimu Python kódu do režimu
+Stiskem klávesy `m` můžeme buňku přepnout z režimu pythonového kódu do režimu
 textu, který nám umožní dokumenty obohatit o spoustu různého obsahu. Že je buňka
 v textovém režimu poznáme podle toho, že nalevo od ní už nebude modré označení
 `In [ ]`. Zatímco u buňek s Pythonem se nám po spuštění programu výsledek vypíše
@@ -192,7 +192,7 @@ Dvojice hvězdiček na každé straně pak udělá text **tučný**.
 * Když bude několik řádků začínat hvězdičkou, stane se z nich seznam s odrážkami.
 Když na začátku použijeme čísla, bude seznam číslovaný.
 * Odkazy vypadají takto: `[text odkazu](cesta či URL adresa)` - do hranatých
-závorek na začátek se napíše text odkazu a do kulatých závorek pak cestak k cíli
+závorek na začátek se napíše text odkazu a do kulatých závorek pak cesta k cíli
 či URL adresa.
 * Obrázky vypadají téměř stejně jako odkazy, jen mají na začátku před první
 hranatou závorkou vykřičník: `![logo pythonu](static/python_logo.py)`
@@ -202,10 +202,10 @@ takto:
 
 ![markdown](static/markdown.png)
 
-### Latex
+### LaTeX
 
 Pokud potřebuješ zapsat do dokumentu nějaké rovnice či vzorce, můžeš k tomu
-použít Latex. Latexovou formuli stačí začít a ukončit pomocí `$$`.
+použít LaTeX. Latexovou formuli stačí začít a ukončit pomocí `$$`.
 
 Například zápis `$$ c = \sqrt(a^2 + b^2)$$` bude po spuštění buňky vypadat takto:
 
@@ -221,7 +221,7 @@ Zkus si naprogramovat v Jupyter Notebooku jednoduchou textovou hru. Bude to
 známá hra **Kdo, s kým, kde a co dělali?**. Tvým úkolem bude naprogramovat celou
 hru s následujícím průběhem:
 
-* Hra se uživatele zeptá na otázku (např. Kdo?) a nechá ho odpovídat, dokud se
+* Hra se uživatele zeptá na otázku (např. "Kdo?") a nechá ho odpovídat, dokud se
 mu bude chtít. Konec odpovídání na nějakou otázku může být signalizován třeba
 odpovědí "konec".
 * Po té hra přejde na další otázku v řadě - "S kým?". 

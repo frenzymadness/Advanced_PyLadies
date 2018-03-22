@@ -21,7 +21,7 @@ vybrat hned z několika možností.
 ### Windows
 
 Pokud už máš instalovaný Python 3 a vše bez potíží funguje, použíj pro instalaci
-Jupyter Notebooku [standardní cestu instalace balíčků pro Python](#instalace_pomocí_pipu).
+Jupyter Notebooku [standardní cestu instalace balíčků pro Python](#instalace-pomocí-pipu).
 
 Na Windows je možné nainstalovat Jupyter Notebook i jako součást distribuce
 *Anaconda*, která mimo jiné obsahuje i Python samotný a další knihovny užitečné
@@ -43,7 +43,7 @@ $ sudo apt install jupyter-notebook jupyter-core
 ```
 
 Pokud ve tvé distribuci Jupyter Notebook k dispozici není nebo si jej chceš
-instalovat do virtuálního prostředí, přejdi na [další kapitolu](#instalace_pomocí_pipu).
+instalovat do virtuálního prostředí, přejdi na [další kapitolu](#instalace-pomocí-pipu).
 
 ### Instalace pomocí PIPu
 

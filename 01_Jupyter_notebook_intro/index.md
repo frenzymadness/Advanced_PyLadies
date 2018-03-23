@@ -45,6 +45,20 @@ $ sudo apt install jupyter-notebook jupyter-core
 Pokud ve tvé distribuci Jupyter Notebook k dispozici není nebo si jej chceš
 instalovat do virtuálního prostředí, přejdi na [další kapitolu](#instalace-pomocí-pipu).
 
+### macOS
+
+Na Macu můžeš Jupyter Notebook také nainstalovat [pomocí PIPu](#instalace-pomocí-pipu).
+
+Druhou možností je použít balíčkovací nástrojem [Homebrew](https://brew.sh/index_cs),
+kterým jsi pravděpodobně již instalovala i samotný Python. Pokud ho nemáš, nainstaluj
+si jej podle [návodu](https://brew.sh/index_cs#install).
+
+Pokud už Homebrew v počítači máš, můžeš Jupyter Notebook nainstalovat příkazem:
+
+```shell
+$ brew install jupyter
+```
+
 ### Instalace pomocí PIPu
 
 Pokud máš Python 3 již nainstalovaný, můžeš pro instalaci balíčků použít jeho

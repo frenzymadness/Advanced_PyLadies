@@ -74,7 +74,7 @@ Do příkazové řádky zadej následující příkaz:
 python3 -m pip install --user jupyter
 ```
 
-> Používáš-li Windows, budeš muset pravděpodobně na začátku příkazu použít místo
+> Používáš-li Windows, budeš muset pravděpodobně na začátku příkazů použít místo
 `python3` jen `python`.
 
 ## Spuštění
@@ -83,6 +83,12 @@ Po úspěšné instalaci lze Jupyter Notebook spustit jednoduchým příkazem:
 
 ```shell
 $ jupyter-notebook
+```
+
+Pokud tento příkaz čirou náhodou nefunguje, vyzkoušej následující:
+
+```shell
+$ python3 -m notebook
 ```
 
 Po spuštění Notebooku se automaticky spustí i webový prohlížeč, ve kterém se

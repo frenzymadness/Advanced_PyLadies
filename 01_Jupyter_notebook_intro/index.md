@@ -20,7 +20,7 @@ vybrat hned z několika možností.
 
 ### Windows
 
-Pokud už máš instalovaný Python 3 a vše bez potíží funguje, použij pro instalaci
+Pokud už máš nainstalovaný Python 3 a vše bez potíží funguje, použij pro instalaci
 Jupyter Notebooku [standardní cestu instalace balíčků pro Python](#instalace-pomocí-pipu).
 
 Na Windows je možné nainstalovat Jupyter Notebook i jako součást distribuce
@@ -47,7 +47,8 @@ instalovat do virtuálního prostředí, přejdi na [další kapitolu](#instalac
 
 ### macOS
 
-Na Macu můžeš Jupyter Notebook také nainstalovat [pomocí PIPu](#instalace-pomocí-pipu).
+Na Macu můžeš Jupyter Notebook nainstalovat [pomocí PIPu](#instalace-pomocí-pipu),
+pokud už máš nainstalovaný Python 3 a vše bez potíží funguje.
 
 Druhou možností je použít balíčkovací nástrojem [Homebrew](https://brew.sh/index_cs),
 kterým jsi pravděpodobně již instalovala i samotný Python. Pokud ho nemáš, nainstaluj

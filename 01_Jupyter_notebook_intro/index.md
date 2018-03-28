@@ -85,11 +85,13 @@ Po úspěšné instalaci lze Jupyter Notebook spustit jednoduchým příkazem:
 $ jupyter-notebook
 ```
 
-Pokud tento příkaz čirou náhodou nefunguje, vyzkoušej následující:
+Pokud ti tento příkaz nefunguje, vyzkoušej následující:
 
 ```shell
 $ python3 -m notebook
 ```
+
+> Opět, používáš-li Windows, budeš muset pravděpodobně použít místo `python3` jen `python`.
 
 Po spuštění Notebooku se automaticky spustí i webový prohlížeč, ve kterém se
 ti editor zobrazí.

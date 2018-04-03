@@ -11877,7 +11877,7 @@ div#notebook {
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">try</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Zkusme dělit nulou ...&#39;</span><span class="p">)</span>
     <span class="n">x</span> <span class="o">=</span> <span class="mi">10</span> <span class="o">/</span> <span class="mi">0</span>  <span class="c1"># !!!</span>
-<span class="k">except</span><span class="p">:</span>
+<span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;CHYBA: Nelze dělit nulou!&#39;</span><span class="p">)</span>
 <span class="k">else</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;K vyvolání výjimky nedošlo&#39;</span><span class="p">)</span>
@@ -11942,7 +11942,7 @@ Konec ukázky
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">try</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Zkusme dělit nulou ...&#39;</span><span class="p">)</span>
     <span class="n">x</span> <span class="o">=</span> <span class="mi">10</span> <span class="o">/</span> <span class="mi">2</span>
-<span class="k">except</span><span class="p">:</span>
+<span class="k">except</span> <span class="ne">ZeroDivisionError</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;CHYBA: Nelze dělit nulou!&#39;</span><span class="p">)</span>
 <span class="k">else</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;K vyvolání výjimky nedošlo&#39;</span><span class="p">)</span>
@@ -11979,7 +11979,7 @@ Konec ukázky
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Na posledním příkladu si můžeš vyzkoušet, že blok <code>else</code> se neprovede při vyvolání výjimky bez ohledu na to, zda je výjimka správně odchycena. Konkrétně v tomto případě se snažíme odchytit výjimku <code>ValueError</code>, ale místo toho nastala výjimka <code>ZeroDivisionError</code>.</p>
+<p>Na posledním příkladu s <code>else</code> si můžeš vyzkoušet, že blok <code>else</code> se neprovede při vyvolání výjimky bez ohledu na to, zda je výjimka správně odchycena. Konkrétně v tomto případě se snažíme odchytit výjimku <code>ValueError</code>, ale místo toho nastala výjimka <code>ZeroDivisionError</code>.</p>
 
 </div>
 </div>
@@ -12048,6 +12048,120 @@ Konec ukázky
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="V&#237;cen&#225;sobn&#253;-except">V&#237;cen&#225;sobn&#253; except<a class="anchor-link" href="#V&#237;cen&#225;sobn&#253;-except">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Pokud je bloků <code>except</code> více a několik z nich vyhovyje vyvolané výjimce, provede se vždy ten dříve definovaný. Například  výjimka <code>ArithmeticError</code> je obecnější výjimka než <code>ZeroDivisionError</code> - přesněji je výjimka <code>ArithmeticErrro</code> v hierarchii výjimek nadřazena výjimce <code>ZeroDivisionError</code> - a proto je odchycena a ve vyhodnocování dalších výjimek se nepokračuje. Hierarchie výjimek je k nalezení <a href="https://docs.python.org/3/library/exceptions.html#exception-hierarchy">v dokumentaci</a>.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Zkusme dělit nulou ...&#39;</span><span class="p">)</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="mi">10</span> <span class="o">/</span> <span class="mi">0</span>  <span class="c1"># !!!</span>
+<span class="k">except</span> <span class="ne">ArithmeticError</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;CHYBA: nějaká aritmetická&#39;</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">ZeroDivisionError</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;CHYBA: dělení nulou!&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;K vyvolání výjimky nedošlo&#39;</span><span class="p">)</span>
+<span class="k">finally</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Konec ukázky&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Zkusme dělit nulou ...
+CHYBA: nějaká aritmetická
+Konec ukázky
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Správně by se tedy jako první měly odchytávat co možná nejkonkrétnější výjimky a až pak ty obecnější. Tento přístup nám umožní lépe na konkrétní výjimky reagovat a třeba poskytnout i lepší chybové hlášky uživateli.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Zkusme dělit nulou ...&#39;</span><span class="p">)</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="mi">10</span> <span class="o">/</span> <span class="mi">0</span>  <span class="c1"># !!!</span>
+<span class="k">except</span> <span class="ne">ZeroDivisionError</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;CHYBA: dělení nulou!&#39;</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">ArithmeticError</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;CHYBA: nějaká aritmetická&#39;</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;CHYBA: nějaká obecná&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;K vyvolání výjimky nedošlo&#39;</span><span class="p">)</span>
+<span class="k">finally</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Konec ukázky&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Zkusme dělit nulou ...
+CHYBA: dělení nulou!
+Konec ukázky
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="For-a-While">For a While<a class="anchor-link" href="#For-a-While">&#182;</a></h2>
 </div>
 </div>
@@ -12064,7 +12178,7 @@ Konec ukázky
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
@@ -12113,7 +12227,7 @@ Print v bloku else
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
@@ -12163,7 +12277,7 @@ Print v bloku else
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">cisla</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">64</span><span class="p">,</span> <span class="mi">128</span><span class="p">,</span> <span class="mi">256</span><span class="p">]</span>
@@ -12211,7 +12325,7 @@ Print v bloku else
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">cisla</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">64</span><span class="p">,</span> <span class="mi">128</span><span class="p">,</span> <span class="mi">256</span><span class="p">]</span>
@@ -12253,28 +12367,34 @@ Print v bloku else
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Pokud číslo dělitelné pěti v seznamu nebude a cyklus tedy při prohledávání dojde až na konec, provede se blok <code>else</code>. Toho lze využít ve všech podobných případech, kdy potřebujeme v nějaké sekvenci něco najít a pokud to nenajdeme, tak provést nějakou navazující akci.</p>
 <p>U cyklů <code>while</code> je situace velmi podobná, i když se v tomto případě nejedná o zpracování sekvence jako u cyklu <code>for</code>. Pokud cyklus <code>while</code> skončí sám od sebe - tedy dojde do stavu, kdy podmínka neplatí a proto cyklus končí - blok <code>else</code> se provede. Pokud jej ale ukončíme pomocí <code>break</code>, blok <code>else</code> se nespustí.</p>
-<p>Dejme počítači několik pokusů, aby na pomyslné kostce hodil šestku:</p>
+<p>Zkusme, zda počítač v daném časovém limitu vygeneruje dvakrát stejné náhodně číslo:</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">random</span> <span class="k">import</span> <span class="n">randrange</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">time</span> <span class="k">import</span> <span class="n">time</span>
+<span class="kn">from</span> <span class="nn">random</span> <span class="k">import</span> <span class="n">randrange</span>
 
-<span class="n">pokusy</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="c1"># Funkce time() při každém zavolání vrátí aktuální čas v sekundách (od určitého</span>
+<span class="c1"># pevně daného momentu).</span>
+<span class="c1"># Chceme skončit po jedné sekundě:</span>
+<span class="n">limit</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">cas_konce</span> <span class="o">=</span> <span class="n">time</span><span class="p">()</span> <span class="o">+</span> <span class="n">limit</span>
+<span class="n">rozsah_cisel</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="n">nahodne_cislo</span> <span class="o">=</span> <span class="n">randrange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">rozsah_cisel</span><span class="p">)</span>
 
-<span class="k">while</span> <span class="n">pokusy</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">:</span>
-    <span class="n">hod</span> <span class="o">=</span> <span class="n">randrange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">)</span>
-    <span class="n">pokusy</span> <span class="o">+=</span> <span class="mi">1</span>
-    <span class="k">if</span> <span class="n">hod</span> <span class="o">==</span> <span class="mi">6</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Počítač hodil šestku na </span><span class="si">{}</span><span class="s1">. pokus&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">pokusy</span><span class="p">))</span>
+<span class="k">while</span> <span class="n">time</span><span class="p">()</span> <span class="o">&lt;</span> <span class="n">cas_konce</span><span class="p">:</span>
+    <span class="n">dalsi_nahodne_cislo</span> <span class="o">=</span> <span class="n">randrange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">rozsah_cisel</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">dalsi_nahodne_cislo</span> <span class="o">==</span> <span class="n">nahodne_cislo</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Mám to! Původní číslo bylo </span><span class="si">{}</span><span class="s1">!&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">nahodne_cislo</span><span class="p">))</span>
         <span class="k">break</span>
 <span class="k">else</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Počítači se to na pět pokusů nepovedlo&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{}</span><span class="s1">s limit počítači nestačil k vygenerování stejného náhodného čísla&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">limit</span><span class="p">))</span>
 </pre></div>
 
 </div>
@@ -12291,7 +12411,7 @@ Print v bloku else
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Počítač hodil šestku na 4. pokus
+<pre>Mám to! Původní číslo bylo 90!
 </pre>
 </div>
 </div>
@@ -12304,28 +12424,34 @@ Print v bloku else
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>V tomto případě se to počítači povedlo splnit, cyklus se ukončil pomocí break a blok else se tím pádem neprovedl.</p>
+<p>V tomto případě počítač vybíral jen ze stovky čísel a proto se mu to povedlo splnit, cyklus se ukončil pomocí break a blok else se tím pádem neprovedl.</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">random</span> <span class="k">import</span> <span class="n">randrange</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">time</span> <span class="k">import</span> <span class="n">time</span>
+<span class="kn">from</span> <span class="nn">random</span> <span class="k">import</span> <span class="n">randrange</span>
 
-<span class="n">pokusy</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="c1"># Funkce time() při každém zavolání vrátí aktuální čas v sekundách (od určitého</span>
+<span class="c1"># pevně daného momentu).</span>
+<span class="c1"># Chceme skončit po jedné sekundě:</span>
+<span class="n">limit</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">cas_konce</span> <span class="o">=</span> <span class="n">time</span><span class="p">()</span> <span class="o">+</span> <span class="n">limit</span>
+<span class="n">rozsah_cisel</span> <span class="o">=</span> <span class="mi">1000000000</span>
+<span class="n">nahodne_cislo</span> <span class="o">=</span> <span class="n">randrange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">rozsah_cisel</span><span class="p">)</span>
 
-<span class="k">while</span> <span class="n">pokusy</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">:</span>
-    <span class="n">hod</span> <span class="o">=</span> <span class="n">randrange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">)</span>
-    <span class="n">pokusy</span> <span class="o">+=</span> <span class="mi">1</span>
-    <span class="k">if</span> <span class="n">hod</span> <span class="o">==</span> <span class="mi">6</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Počítač hodil šestku na </span><span class="si">{}</span><span class="s1">. pokus&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">pokusy</span><span class="p">))</span>
+<span class="k">while</span> <span class="n">time</span><span class="p">()</span> <span class="o">&lt;</span> <span class="n">cas_konce</span><span class="p">:</span>
+    <span class="n">dalsi_nahodne_cislo</span> <span class="o">=</span> <span class="n">randrange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">rozsah_cisel</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">dalsi_nahodne_cislo</span> <span class="o">==</span> <span class="n">nahodne_cislo</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Mám to! Původní číslo bylo </span><span class="si">{}</span><span class="s1">!&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">nahodne_cislo</span><span class="p">))</span>
         <span class="k">break</span>
 <span class="k">else</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Počítači se to na pět pokusů nepovedlo&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{}</span><span class="s1">s limit počítači nestačil k vygenerování stejného náhodného čísla&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">limit</span><span class="p">))</span>
 </pre></div>
 
 </div>
@@ -12342,7 +12468,7 @@ Print v bloku else
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Počítači se to na pět pokusů nepovedlo
+<pre>1s limit počítači nestačil k vygenerování stejného náhodného čísla
 </pre>
 </div>
 </div>
@@ -12355,7 +12481,7 @@ Print v bloku else
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Tady už počítač tolik štěstí neměl a k hození šestky mu pět pokusů bylo málo a tak došel cyklus až do stavu, kdy podmínka pro jeho pokračování neplatila, cyklus se ukončil a provedl se blok <code>else</code>.</p>
+<p>Tady už počítač vybíral z miliardy čísel. Jedna sekunda k náhodnému generování stejného čísla byla příliš krátká a tak došel cyklus až do stavu, kdy podmínka pro jeho pokračování neplatila, cyklus se ukončil a provedl se blok <code>else</code>.</p>
 
 </div>
 </div>

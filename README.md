@@ -7,7 +7,7 @@ Materiály pro lekce pokročilého Pythonu PyLadies v Ostravě. Materiály zde b
 První návrh osnovy pokročilého kurzu, který se bude v závisloti na vývoji, zpětné vazbě a požadavkům účastníků měnit.
 
 1. [Jupyter notebook intro](01_Jupyter_notebook_intro/index.md)
-2. `else` v cyklech a `pass` + rozbalování entic a seznamů
+2. [`else` v cyklech](02_else_pass_unpacking/else.ipynb) a [`pass`](02_else_pass_unpacking/pass.ipynb) + [rozbalování sekvencí](02_else_pass_unpacking/unpacking.ipynb)
 3. Argumenty funkcí
 4. Pokročilejší formátování výstupů pomocí metody `format()`
 5. Speciální datové typy z modulu `collections`

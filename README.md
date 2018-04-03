@@ -23,7 +23,7 @@ První návrh osnovy pokročilého kurzu, který se bude v závisloti na vývoji
 15. Logování
 16. Souborové systémy
 17. Komprese dat
-18. Cryptografie
+18. Kryptografie
 19. Multijazyčnost
 20. GUI v QT
 

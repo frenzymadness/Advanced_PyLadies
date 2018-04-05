@@ -11783,7 +11783,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Klauzuli <code>else</code> už moc dobře známe z podmíněného větvení programu a poslouží nám také při odchytávání výjimek. Dnes si k tomu přidáme ještě i ne příliš známé využití v cyklech.</p>
+<p>Klauzuli <code>else</code> už moc dobře známe z podmíněného větvení programu a poslouží nám také při odchytávání výjimek. Dnes si ukážeme ještě i ne příliš známé využití v cyklech.</p>
 
 </div>
 </div>
@@ -11847,7 +11847,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Tohle prozatím není žádná raketová věda. Pokud zkrátka není splněna žádná z podmínek (<code>if</code> či <code>elif</code>) větvení programu, dojde se při jejich vyhodnocování až na konec a provede se obsah větve <code>else</code>. Pokud se <code>else</code> rozhodneš použít, musíš jej umístit až na samotný konec větvení.</p>
+<p>Tohle prozatím není žádná věda. Pokud zkrátka není splněna žádná z podmínek (<code>if</code> či <code>elif</code>) větvení programu, dojde se při jejich vyhodnocování až na konec a provede se obsah větve <code>else</code>. Pokud se <code>else</code> rozhodneš použít, musíš jej umístit až na samotný konec větvení.</p>
 
 </div>
 </div>
@@ -11916,9 +11916,9 @@ Konec ukázky
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>V tomo případě náš ukázkový kód obsahuje řádek, který výjimku vyvolá a proto se neprovede blok <code>else</code>. Vezměme to postupně:</p>
 <ol>
-<li>Blok <code>try</code> se provede vždy. V něm je umístěn kód, u kterého očekáváme, že by mohlo k vyvolání výjimky dojít - například při zpracování vstupu od uživatele či při čtení z exteního souboru.</li>
-<li>Blok <code>except</code> se provede právě tehdy, pokud v bloku <code>try</code> k vyvolání výjimky došlo. Bloků <code>except</code> můžeme mít i více a u každého z nich mít definováno, kterou výjimku má odchytit.</li>
-<li>Blok <code>else</code>, který by se provedl v tom případě, kdyby k vyvolání výjimky nedošlo.</li>
+<li>Blok <code>try</code> se provede vždy. V něm je umístěn kód, jehož vykonávání by mohlo vést k vyvolání výjimky - například při zpracování vstupu od uživatele, práci se soubory nebo při připojování k internetu.</li>
+<li>Blok <code>except</code> se provede právě tehdy, pokud v bloku <code>try</code> k vyvolání výjimky došlo. Bloků <code>except</code> můžeme mít i více a u každého z nich mít definováno, na kterou výjimku má reagovat.</li>
+<li>Blok <code>else</code>, který se provede, když k vyvolání výjimky nedojde.</li>
 <li>A jako poslední blok <code>finally</code>, který se provede vždy bez ohledu na to, zda k vyvolání výjimky došlo či nikoli.</li>
 </ol>
 
@@ -12056,7 +12056,7 @@ Konec ukázky
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Pokud je bloků <code>except</code> více a několik z nich vyhovyje vyvolané výjimce, provede se vždy ten dříve definovaný. Například  výjimka <code>ArithmeticError</code> je obecnější výjimka než <code>ZeroDivisionError</code> - přesněji je výjimka <code>ArithmeticErrro</code> v hierarchii výjimek nadřazena výjimce <code>ZeroDivisionError</code> - a proto je odchycena a ve vyhodnocování dalších výjimek se nepokračuje. Hierarchie výjimek je k nalezení <a href="https://docs.python.org/3/library/exceptions.html#exception-hierarchy">v dokumentaci</a>.</p>
+<p>Pokud je bloků <code>except</code> více a několik z nich vyhovuje vyvolané výjimce, provede se vždy ten dříve definovaný. Například  výjimka <code>ArithmeticError</code> je obecnější výjimka než <code>ZeroDivisionError</code> - přesněji je výjimka <code>ArithmeticErrro</code> v hierarchii výjimek nadřazena výjimce <code>ZeroDivisionError</code> - a proto je odchycena a ve vyhodnocování dalších výjimek se nepokračuje. Hierarchie výjimek je k nalezení <a href="https://docs.python.org/3/library/exceptions.html#exception-hierarchy">v dokumentaci</a>.</p>
 
 </div>
 </div>
@@ -12108,7 +12108,7 @@ Konec ukázky
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Správně by se tedy jako první měly odchytávat co možná nejkonkrétnější výjimky a až pak ty obecnější. Tento přístup nám umožní lépe na konkrétní výjimky reagovat a třeba poskytnout i lepší chybové hlášky uživateli.</p>
+<p>Správně by se tedy jako první měly odchytávat co možná nejkonkrétnější výjimky a až pak ty obecnější. Správné pořadí nám umožní lépe na konkrétní výjimky reagovat a třeba poskytnout i smysluplnější chybové hlášky.</p>
 
 </div>
 </div>
@@ -12424,7 +12424,7 @@ Print v bloku else
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>V tomto případě počítač vybíral jen ze stovky čísel a proto se mu to povedlo splnit, cyklus se ukončil pomocí break a blok else se tím pádem neprovedl.</p>
+<p>V tomto případě počítač vybíral jen ze stovky čísel a proto se mu to povedlo splnit, cyklus byl ukončen pomocí break a blok else se tím pádem neprovedl.</p>
 
 </div>
 </div>

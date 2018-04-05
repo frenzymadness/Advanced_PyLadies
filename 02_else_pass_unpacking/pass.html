@@ -11775,7 +11775,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Pass">Pass<a class="anchor-link" href="#Pass">&#182;</a></h1>
+<h1 id="pass"><code>pass</code><a class="anchor-link" href="#pass">&#182;</a></h1>
 </div>
 </div>
 </div>
@@ -11783,10 +11783,10 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Při psaní kódu v Pythonu občas narazíme na pravidla, která mají svá opodstatnění, ale nám v konkrétní situaci mohou znepříjemnit život.</p>
-<p>Jedním z takových pravidel, na které už jsi možná narazil, je, že některé konstrukce (např. <code>if</code>, <code>except</code>, <code>def</code>, <code>class</code> atp.) nesmí být následovány prázdným řádkem.</p>
+<p>Při psaní kódu v Pythonu občas narazíme na pravidla, která mají svá opodstatnění, nám ale v konkrétní situaci mohou znepříjemnit život.</p>
+<p>Jedním z takových pravidel, na která už jsi možná narazila, je, že některé konstrukce (např. <code>if</code>, <code>except</code>, <code>def</code>, <code>class</code> atp.) nesmí být následovány prázdným řádkem.</p>
 <p>Například chceme-li si definovat funkci, ale ještě nevíme přesně, co by měla dělat. Nebo máme rozvětvenou kombinaci <code>if</code>-<code>elif</code>-<code>else</code> a jednu větev chceme prozatím nechat prázdnou. Nebo chceme odchytávat výjimku, ale nechceme na ni nijak reagovat.</p>
-<p>To všechno jsou příklady situací, ve kterých bychom rádi nechali v tom či onom bloku jen prázdný řádek, ale nemůžeme, protože by to skončilo chybou. Například u definice prázdné funkce:</p>
+<p>To všechno jsou příklady situací, ve kterých bychom rádi nechali v tom či onom bloku jen prázdný řádek, ale nemůžeme, protože by to skončilo chybou. Například u definice prázdné funkce:</p>
 
 </div>
 </div>
@@ -11834,7 +11834,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Nebo u větvení, kde chceme mít nadefinovány všechny možnosti, ale u některých z nich ještě nemáme promyšleno, co by měly dělat.</p>
+<p>Nebo u větvení, kde chceme mít nadefinovány všechny možnosti, ale u některých z nich ještě nemáme promyšleno, co by měly dělat.</p>
 
 </div>
 </div>
@@ -11887,7 +11887,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>A co příklad odchycení výjimky, na kterou ale nechceme nijak reagovat? V tomto případě nám může být úplně jedno, že soubor neexistuje a pokus o jeho smazání vyvolal výjimku.</p>
+<p>A co příklad odchycení výjimky, na kterou ale nechceme nijak reagovat? V tomto případě nám může být úplně jedno, že soubor neexistuje a pokus o jeho smazání vyvolal výjimku.</p>
 
 </div>
 </div>
@@ -11938,7 +11938,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Na všechny tyto příklady existuje jedno řešení - klauzule <code>pass</code>. Samotné <code>pass</code> neudělá vůbec nic a nemá v kódu ani žádný speciální význam. Je tam jen pro to, aby tam nějaký kód byl a my se zbavili chyby z předchozích příkladů. Ty by při použití <code>pass</code> mohly vypadat následovně:</p>
+<p>Na všechny tyto příklady existuje jedno řešení – klauzule <code>pass</code>. Samotné <code>pass</code> neudělá vůbec nic a nemá v kódu ani žádný speciální význam. Je tam jen proto, aby tam nějaký kód byl a my se zbavili chyby z předchozích příkladů. Ty by při použití <code>pass</code> mohly vypadat následovně:</p>
 
 </div>
 </div>
@@ -12042,7 +12042,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Pro úplnost dodejme, že stejnou funkci by splnil i dokumentační řetězec (<strong>nikoli komentář</strong>). Například u funkcí by mohl být i užitečnější než <code>pass</code> a mohl by obsahovat i vysvětlení, proč je prozatím funkce prázdná.</p>
+<p>Pro úplnost dodejme, že stejnou funkci by splnil i <code>"""dokumentační řetězec"""</code> (<strong>nikoli <code># komentář</code></strong>). Například u funkcí by mohl být i užitečnější než <code>pass</code> a mohl by obsahovat i vysvětlení, proč je prozatím funkce prázdná.</p>
 
 </div>
 </div>

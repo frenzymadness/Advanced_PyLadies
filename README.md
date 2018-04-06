@@ -8,7 +8,7 @@ První návrh osnovy pokročilého kurzu, který se bude v závisloti na vývoji
 
 1. [Jupyter notebook intro](01_Jupyter_notebook_intro/index.md)
 2. [`else` v cyklech](02_else_pass_unpacking/else.ipynb) a [`pass`](02_else_pass_unpacking/pass.ipynb) + [rozbalování sekvencí](02_else_pass_unpacking/unpacking.ipynb)
-3. Argumenty funkcí
+3. [Argumenty funkcí](03_functions_arguments/functions_arguments.ipynb)
 4. Pokročilejší formátování výstupů pomocí metody `format()`
 5. Speciální datové typy z modulu `collections`
 6. List/dictionary comprehensions

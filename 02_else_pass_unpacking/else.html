@@ -12056,7 +12056,7 @@ Konec ukázky
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Pokud je bloků <code>except</code> více a několik z nich vyhovuje vyvolané výjimce, provede se vždy ten dříve definovaný. Například  výjimka <code>ArithmeticError</code> je obecnější výjimka než <code>ZeroDivisionError</code> - přesněji je výjimka <code>ArithmeticErrro</code> v hierarchii výjimek nadřazena výjimce <code>ZeroDivisionError</code> - a proto je odchycena a ve vyhodnocování dalších výjimek se nepokračuje. Hierarchie výjimek je k nalezení <a href="https://docs.python.org/3/library/exceptions.html#exception-hierarchy">v dokumentaci</a>.</p>
+<p>Pokud je bloků <code>except</code> více a několik z nich vyhovuje vyvolané výjimce, provede se vždy ten dříve definovaný. Například  výjimka <code>ArithmeticError</code> je obecnější výjimka než <code>ZeroDivisionError</code> - přesněji je výjimka <code>ArithmeticError</code> v hierarchii výjimek nadřazena výjimce <code>ZeroDivisionError</code> - a proto je odchycena a ve vyhodnocování dalších výjimek se nepokračuje. Hierarchie výjimek je k nalezení <a href="https://docs.python.org/3/library/exceptions.html#exception-hierarchy">v dokumentaci</a>.</p>
 
 </div>
 </div>
@@ -12108,7 +12108,7 @@ Konec ukázky
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Správně by se tedy jako první měly odchytávat co možná nejkonkrétnější výjimky a až pak ty obecnější. Správné pořadí nám umožní lépe na konkrétní výjimky reagovat a třeba poskytnout i smysluplnější chybové hlášky.</p>
+<p>Správně by se tedy jako první měly odchytávat co možná nejkonkrétnější výjimky a až pak ty obecnější. Správné pořadí nám umožní na konkrétní výjimky reagovat lépe a třeba i poskytnout smysluplnější chybové hlášky.</p>
 
 </div>
 </div>
@@ -12269,8 +12269,8 @@ Print v bloku else
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Cyklus <code>for</code> jsme nám již dobře známým způsobem ukončili pomocí <code>break</code> ve chvíli, kdy <code>x</code> začalo nabývat hodnot větších než 2. Daleko zajímavější je ale to, že se v tomto případě neprovedl <code>print</code> zapsaný v bloku <code>else</code>. Čím to?</p>
-<p>Blok <code>else</code> u <code>for</code> cyklu se totiž provede jen tehdy, pokud cyklus dojde až na konec sekvence, kterou prochází. U první ukázky se tak stalo a <code>for</code> cyklus prošel všech pět hodnot v sekvenci <code>range</code> a dostal se až na její konec. Proto se v první ukázce blok <code>else</code> provedl. V druhé ukázce jsme ale for cyklus ukončili pomocí <code>break</code> dříve, než se stihl cyklus dostat na konec sekvence a proto se blok <code>else</code> nevykonal.</p>
-<p>Pojďmě si vyskoušet, jak by se toho dalo využít například při hledání čísel v číselné řadě:</p>
+<p>Blok <code>else</code> u <code>for</code> cyklu se totiž provede jen tehdy, pokud cyklus dojde až na konec sekvence, kterou prochází. U první ukázky se tak stalo a <code>for</code> cyklus prošel všech pět hodnot v sekvenci <code>range</code> a dostal se až na její konec. Proto se v první ukázce blok <code>else</code> provedl. V druhé ukázce jsme ale <code>for</code> cyklus ukončili pomocí <code>break</code> dříve, než se stihl cyklus dostat na konec sekvence a proto se blok <code>else</code> nevykonal.</p>
+<p>Pojďmě si vyzkoušet, jak by se toho dalo využít například při hledání čísel v číselné řadě:</p>
 
 </div>
 </div>
@@ -12380,8 +12380,8 @@ Print v bloku else
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">time</span> <span class="k">import</span> <span class="n">time</span>
 <span class="kn">from</span> <span class="nn">random</span> <span class="k">import</span> <span class="n">randrange</span>
 
-<span class="c1"># Funkce time() při každém zavolání vrátí aktuální čas v sekundách (od určitého</span>
-<span class="c1"># pevně daného momentu).</span>
+<span class="c1"># Funkce time() při každém zavolání vrátí aktuální čas</span>
+<span class="c1"># v sekundách (od určitého pevně daného momentu).</span>
 <span class="c1"># Chceme skončit po jedné sekundě:</span>
 <span class="n">limit</span> <span class="o">=</span> <span class="mi">1</span>
 <span class="n">cas_konce</span> <span class="o">=</span> <span class="n">time</span><span class="p">()</span> <span class="o">+</span> <span class="n">limit</span>

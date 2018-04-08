@@ -2,6 +2,14 @@
 
 Materiály pro lekce pokročilého Pythonu PyLadies v Ostravě. Materiály zde budou postupně spolu s kurzem vznikat a až budou připraveny, rozšíří obsah portálu [naucse.python.cz](http://naucse.python.cz/).
 
+## Setkání
+
+Jednotlivá setkání jsou organizována na [meetup.com](https://www.meetup.com/Advanced-Python-PyLadies/)
+
+## Videozáznamy
+
+Videozáznamy lekcí budou postupně přibývat v [seznamu videí na YouTube](https://www.youtube.com/playlist?list=PLtMx05xox2EiASl8pnXmssbxA2rHa4s0s)
+
 ## Osnova
 
 První návrh osnovy pokročilého kurzu, který se bude v závisloti na vývoji, zpětné vazbě a požadavkům účastníků měnit.

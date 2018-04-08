@@ -11783,7 +11783,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Dnes se společně podíváme na definici a volání funkcí a na různé možnosti práce s argumenty.</p>
+<p>Dnes se společně podíváme na definici a volání funkcí a na různé možnosti práce s argumenty.</p>
 
 </div>
 </div>
@@ -11800,7 +11800,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Funkce nemusí argumenty vůbec používat. Funkce bez argumentů bývají většinou velmi jednoduché a bez možností ovlivnit jejich chování z vnějšku.</p>
+<p>Funkce nemusí argumenty vůbec používat. Funkce bez argumentů bývají většinou velmi jednoduché a jejich chování z vnějšku nelze nijak ovlivnit.</p>
 
 </div>
 </div>
@@ -11824,14 +11824,14 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>V definici funkce nejsou v závorkách uvedeny žádné argumenty a proto ji ani žádné nepředáváme při jejím volání</p>
+<p>V definici funkce nejsou v závorkách uvedeny žádné argumenty a proto ji ani žádné nepředáváme při jejím volání.</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[43]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">pozdrav</span><span class="p">()</span>
@@ -11872,7 +11872,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Většina funkcí však ke své činnosti nějaké argumenty potřebuje. Nejčastěji se jedná o argumenty nepojmenované neboli poziční.</p>
+<p>Většina funkcí však ke své činnosti nějaké argumenty potřebuje. Nejčastěji se jedná o argumenty nepojmenované neboli poziční.</p>
 
 </div>
 </div>
@@ -11883,8 +11883,8 @@ div#notebook {
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">pozdrav_uzivatele</span><span class="p">(</span><span class="n">osloveni</span><span class="p">,</span> <span class="n">jmeno</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Funce vypíše pozdrav na základě jména a oslovení&quot;&quot;&quot;</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Dobrý den </span><span class="si">{}</span><span class="s2"> </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">osloveni</span><span class="p">,</span> <span class="n">jmeno</span><span class="o">.</span><span class="n">capitalize</span><span class="p">()))</span>
+    <span class="sd">&quot;&quot;&quot;Funkce vypíše pozdrav na základě jména a oslovení&quot;&quot;&quot;</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Dobrý den, </span><span class="si">{}</span><span class="s2"> </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">osloveni</span><span class="p">,</span> <span class="n">jmeno</span><span class="o">.</span><span class="n">capitalize</span><span class="p">()))</span>
 </pre></div>
 
 </div>
@@ -11923,7 +11923,7 @@ div#notebook {
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Dobrý den pane Nováku
+<pre>Dobrý den, pane Nováku
 </pre>
 </div>
 </div>
@@ -11934,7 +11934,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">pozdrav_uzivatele</span><span class="p">(</span><span class="s2">&quot;slečno&quot;</span><span class="p">,</span> <span class="s2">&quot;veroniko&quot;</span><span class="p">)</span>
@@ -11954,7 +11954,7 @@ div#notebook {
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Dobrý den slečno Veroniko
+<pre>Dobrý den, slečno Veroniko
 </pre>
 </div>
 </div>
@@ -11967,14 +11967,14 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Pokud ji zavoláme s menším či větším počtem argumentů, nebude fungovat.</p>
+<p>Pokud ji zavoláme s menším, či větším počtem argumentů, nebude fungovat.</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[47]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">pozdrav_uzivatele</span><span class="p">(</span><span class="s2">&quot;veroniko&quot;</span><span class="p">)</span>
@@ -11997,7 +11997,7 @@ div#notebook {
 <pre>
 <span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">TypeError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-6-da84eec8a638&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-fg">&lt;ipython-input-47-6c5e4bf5ef3a&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-fg">()</span>
 <span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>pozdrav_uzivatele<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#34;veroniko&#34;</span><span class="ansi-blue-fg">)</span>
 
 <span class="ansi-red-fg">TypeError</span>: pozdrav_uzivatele() missing 1 required positional argument: &#39;jmeno&#39;</pre>
@@ -12010,7 +12010,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[48]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">pozdrav_uzivatele</span><span class="p">(</span><span class="s2">&quot;vážená&quot;</span><span class="p">,</span> <span class="s2">&quot;paní&quot;</span><span class="p">,</span> <span class="s2">&quot;veroniko&quot;</span><span class="p">)</span>
@@ -12033,7 +12033,7 @@ div#notebook {
 <pre>
 <span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">TypeError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-7-45187f1204c6&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-fg">&lt;ipython-input-48-8bc9b0d8b688&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-fg">()</span>
 <span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>pozdrav_uzivatele<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#34;vážená&#34;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#34;paní&#34;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#34;veroniko&#34;</span><span class="ansi-blue-fg">)</span>
 
 <span class="ansi-red-fg">TypeError</span>: pozdrav_uzivatele() takes 2 positional arguments but 3 were given</pre>
@@ -12056,8 +12056,8 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Když budeme chtít změnit pořadí argumentů při volání funkce, můžeme použít jejich pojmenovanou variantu.</p>
-<p>Na definici funkce se nic nezmění.</p>
+<p>Když budeme chtít při volání funkce pořadí argumentů změnit, můžeme jednotlivé argumenty pojmenovat a tím jednoznačně přiřadit hodnoty k definovaným názvům bez nutnosti spoléhat na jejich pořadí. V mnoha případech se pojmenované argumenty používají i pro lepší přehlednost.</p>
+<p>Na definici funkce se nic nezmění:</p>
 
 </div>
 </div>
@@ -12069,7 +12069,7 @@ div#notebook {
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">pozdrav_uzivatele</span><span class="p">(</span><span class="n">osloveni</span><span class="p">,</span> <span class="n">jmeno</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Funce vypíše pozdrav na základě jména a oslovení&quot;&quot;&quot;</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Dobrý den </span><span class="si">{}</span><span class="s2"> </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">osloveni</span><span class="p">,</span> <span class="n">jmeno</span><span class="o">.</span><span class="n">capitalize</span><span class="p">()))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Dobrý den, </span><span class="si">{}</span><span class="s2"> </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">osloveni</span><span class="p">,</span> <span class="n">jmeno</span><span class="o">.</span><span class="n">capitalize</span><span class="p">()))</span>
 </pre></div>
 
 </div>
@@ -12081,7 +12081,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Při volání funkce můžeme jednotlivé argumenty pojmenovat a tím jednoznačně přiřadit hodnoty k definovaným názvům bez nutnosti spoléhat na jejich pořadí. V mnoha případech se pojmenované argumenty používají i pro lepší přehlednost.</p>
+<p>Změní se pouze její volání:</p>
 
 </div>
 </div>
@@ -12108,7 +12108,7 @@ div#notebook {
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Dobrý den příteli Karle
+<pre>Dobrý den, příteli Karle
 </pre>
 </div>
 </div>
@@ -12121,7 +12121,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Argumenty-s-v&#253;choz&#237;-hodnotou">Argumenty s v&#253;choz&#237; hodnotou<a class="anchor-link" href="#Argumenty-s-v&#253;choz&#237;-hodnotou">&#182;</a></h2>
+<h2 id="Argumenty-s&#160;v&#253;choz&#237;-hodnotou">Argumenty s&#160;v&#253;choz&#237; hodnotou<a class="anchor-link" href="#Argumenty-s&#160;v&#253;choz&#237;-hodnotou">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -12129,23 +12129,24 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>U některých funkcí může být přínosné mít možnost některé argumenty při volání funkce úplně vynechat a místo hodnoty předané při volání použít hodnotu výchozí, kterou určíme v rámci definice funkce.</p>
-<p>Jelikož můžeme argumenty s výchozí hodnotou při volání funkce vynechat, musíme je při definici funkce dát až jako poslední, abychom zbývající argumenty mohli stále používat jako poziční.</p>
-<p>Jako příklad použijeme funkci pro generování řady mocnic. Funkce bude brát jako poziční argument exponent pro mocnění a jako argument s výchozí hodnotou pak počet mocnin v řadě.</p>
+<p>U některých funkcí může být přínosné mít možnost některé argumenty při volání úplně vynechat s tím, že se v takovém případě použije výchozí hodnota, kterou určíme v rámci definice funkce.</p>
+<p>Právě proto, že můžeme argumenty s výchozí hodnotou při volání funkce vynechat, musíme je při definici funkce dát až jako poslední. Díky tomu můžeme zbývající argumenty stále používat jako poziční.</p>
+<p>Jako příklad upravíme naši funkci <code>pozdrav_uzivatele</code>, která bere poziční argumenty <code>osloveni</code> a <code>jmeno</code>, a přidáme argument s výchozí hodnotou určující, zda má být pozdrav formální, nebo ne.</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">rada_mocnin</span><span class="p">(</span><span class="n">exponent</span><span class="p">,</span> <span class="n">pocet</span><span class="o">=</span><span class="mi">10</span><span class="p">):</span>
-    <span class="n">rada</span> <span class="o">=</span> <span class="p">[]</span>
-    <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">pocet</span><span class="p">):</span>
-        <span class="n">rada</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="n">exponent</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">rada</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">pozdrav_uzivatele</span><span class="p">(</span><span class="n">osloveni</span><span class="p">,</span> <span class="n">jmeno</span><span class="p">,</span> <span class="n">formalni</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Funce vypíše formální, nebo neformální pozdrav na základě jména a oslovení&quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">formalni</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Dobrý den, </span><span class="si">{}</span><span class="s2"> </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">osloveni</span><span class="p">,</span> <span class="n">jmeno</span><span class="o">.</span><span class="n">capitalize</span><span class="p">()))</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Ahoj, </span><span class="si">{}</span><span class="s2"> </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">osloveni</span><span class="p">,</span> <span class="n">jmeno</span><span class="o">.</span><span class="n">capitalize</span><span class="p">()))</span>
 </pre></div>
 
 </div>
@@ -12157,59 +12158,17 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Pokud nestanovíme jinak, pužije se pro argument <code>pocet</code> výchozí hodnota a jako výsledek tedy dostaneme řadu deseti mocnin.</p>
+<p>Pokud nestanovíme jinak, použije se pro argument <code>formalni</code> výchozí hodnota a slečna Veronika bude pozdravena formálně:</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">rada_mocnin</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[11]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>[0, 1, 4, 9, 16, 25, 36, 49, 64, 81]</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Počet si ale v případě potřeby můžeme nastavit na jinou hodnotu, jako u jakéhokoli jiného argumentu.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">rada_mocnin</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">pozdrav_uzivatele</span><span class="p">(</span><span class="s2">&quot;slečno&quot;</span><span class="p">,</span> <span class="s2">&quot;veroniko&quot;</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -12222,15 +12181,13 @@ div#notebook {
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[12]:</div>
+<div class="prompt"></div>
 
 
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>[0, 1, 8, 27, 64]</pre>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Dobrý den, slečno Veroniko
+</pre>
 </div>
-
 </div>
 
 </div>
@@ -12241,17 +12198,17 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>I s pomocí pojmenovaných argumentů.</p>
+<p>V případě potřeby můžeme ale nastavit argument <code>formalni</code> na jinou hodnotu, stejně jako jakýkoliv jiný argument:</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">rada_mocnin</span><span class="p">(</span><span class="n">pocet</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">exponent</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">pozdrav_uzivatele</span><span class="p">(</span><span class="s2">&quot;milej&quot;</span><span class="p">,</span> <span class="s2">&quot;tondo&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -12264,15 +12221,53 @@ div#notebook {
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[13]:</div>
+<div class="prompt"></div>
 
 
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>[0, 1, 8, 27, 64]</pre>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Ahoj, milej Tondo
+</pre>
+</div>
 </div>
 
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Nastavit ho můžeme i pomocí pojmenovaných argumentů:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">pozdrav_uzivatele</span><span class="p">(</span><span class="n">jmeno</span><span class="o">=</span><span class="s2">&quot;tondo&quot;</span><span class="p">,</span> <span class="n">osloveni</span><span class="o">=</span><span class="s2">&quot;milej&quot;</span><span class="p">,</span> <span class="n">formalni</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Ahoj, milej Tondo
+</pre>
+</div>
 </div>
 
 </div>
@@ -12291,15 +12286,15 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Funkce <code>print</code> je oblíbeným příkladem toho, že některé funkce neznají počet argumentů předem a je tedy třeba je definovat tak, aby si uměly poradit s proměnným počtem argumentů. K tomu nám poslouží hvězdička (<code>*</code>), se kterou jsme se seznámili v minulé lekci při rozbalování sekvencí.</p>
-<p>Všechny argumenty, které jsou při volání takové funkce předány jsou dostupné jako n-tice uvnitř funkce a dají se tedy mimo jiné například projít pomocí cyklu <code>for</code>.</p>
+<p>Funkce <code>print</code> je oblíbeným příkladem toho, že některé funkce neznají počet argumentů předem. Takové funkce je třeba je definovat tak, aby si s proměnným počtem argumentů uměly poradit. K tomu nám poslouží hvězdička (<code>*</code>), se kterou jsme se seznámili v minulé lekci při rozbalování sekvencí.</p>
+<p>Všechny argumenty, které jsou funkci předány při jejím volání, jsou dostupné jako n-tice uvnitř funkce. Dají se tedy mimo jiné například projít pomocí cyklu <code>for</code>.</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In&nbsp;[55]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">suma_cisel</span><span class="p">(</span><span class="o">*</span><span class="n">cisla</span><span class="p">):</span>
@@ -12318,14 +12313,14 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Funkci takto definovanou pak můžeme volat s jakýmkoli množstvím argumentů</p>
+<p>Funkci takto definovanou pak můžeme volat s jakýmkoli množstvím argumentů:</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="prompt input_prompt">In&nbsp;[56]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">suma_cisel</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">40</span><span class="p">)</span>
@@ -12341,7 +12336,7 @@ div#notebook {
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[15]:</div>
+<div class="prompt output_prompt">Out[56]:</div>
 
 
 
@@ -12358,7 +12353,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="prompt input_prompt">In&nbsp;[57]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">suma_cisel</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
@@ -12374,7 +12369,7 @@ div#notebook {
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[16]:</div>
+<div class="prompt output_prompt">Out[57]:</div>
 
 
 
@@ -12393,14 +12388,14 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Nebo třeba i bez argumentu, pokud se s tím funkce umí vypořádat.</p>
+<p>Volat ji můžeme třeba i bez argumentu, pokud se s tím umí vypořádat:</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="prompt input_prompt">In&nbsp;[58]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">suma_cisel</span><span class="p">()</span>
@@ -12416,7 +12411,7 @@ div#notebook {
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[17]:</div>
+<div class="prompt output_prompt">Out[58]:</div>
 
 
 
@@ -12435,14 +12430,14 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>V podobném duchu je možné funkci připravit i pro proměnný počet pojmenovaných argumentů. Rozdíly jsou tu jen dva: v definici funkce se místo jedné hvězdičky pužijí dvě a předané argumenty jsou pak uvnitř funkce dostupné jako slovník.</p>
+<p>V podobném duchu je možné funkci připravit i pro proměnný počet pojmenovaných argumentů. Rozdíly jsou tu jen dva: v definici funkce se místo jedné hvězdičky použijí dvě (<code>**</code>) a předané argumenty jsou pak uvnitř funkce dostupné jako slovník.</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="prompt input_prompt">In&nbsp;[59]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">vypis_skore</span><span class="p">(</span><span class="o">**</span><span class="n">skore</span><span class="p">):</span>
@@ -12457,7 +12452,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="prompt input_prompt">In&nbsp;[60]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">vypis_skore</span><span class="p">(</span><span class="n">pepa</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">karel</span><span class="o">=</span><span class="mi">40</span><span class="p">,</span> <span class="n">libor</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
@@ -12500,7 +12495,7 @@ Hráč Libor nahrál 20 bodů
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Všechny výše zmíněné možnosti definice funkcí je možné mezi sebou více či méně kombinovat. Pojďme jako příklady použít funkce, které již notoricky známe.</p>
+<p>Všechny výše zmíněné možnosti definice funkcí je možné mezi sebou více, či méně kombinovat. Pojďme jako příklady použít funkce, které již notoricky známe.</p>
 
 </div>
 </div>
@@ -12527,8 +12522,8 @@ Hráč Libor nahrál 20 bodů
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Na definici zmámé funkce <code>print</code> můžeme vidět, že jí můžeme předat proměnný počet argumentů jako <code>objects</code> k výpisu a dále několik argumentů s nastavenou výchozí hodnotou.</p>
-<p>Při volání funkce <code>print</code> se pak všechny nepojmenované argumenty předají jako n-tice <code>objects</code> a ty pojmenované změní chování funkce <code>print</code>.</p>
+<p>Na definici zmámé funkce <code>print</code> můžeme vidět, že jí můžeme předat proměnný počet argumentů jako <code>objects</code> k výpisu a dále několik argumentů s nastavenou výchozí hodnotou.</p>
+<p>Při volání funkce <code>print</code> se pak všechny nepojmenované argumenty předají jako n-tice <code>objects</code> a ty pojmenované změní chování funkce <code>print</code>.</p>
 
 </div>
 </div>
@@ -12555,15 +12550,15 @@ Hráč Libor nahrál 20 bodů
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Funkce enumerate nám umí očíslovat iterovatelný objekt, takže například v cyklu <code>for</code> můžeme mít k dispozici nejen jednotlivé prvky z iterovatelného objektu, ale i číslo označující jejich pozici.</p>
-<p>V definici je jeden poziční argument, který je pro fungování funkce vyžadován a pak jeden s výchozí hodnotou, který můžeme vynechat a tím nechat funkci počítat čísla pozic jednotlivých prvků od nuly.</p>
+<p>Funkce <code>enumerate</code> nám umí očíslovat iterovatelný objekt: v cyklu <code>for</code> tak můžeme mít k dispozici nejen jednotlivé prvky z iterovatelného objektu, ale i číslo označující jejich pozici.</p>
+<p>V definici funkce je jeden poziční argument, který je pro fungování funkce vyžadován. Dále je tam jeden argument s výchozí hodnotou, který můžeme vynechat a tím nechat funkci počítat čísla pozic jednotlivých prvků od nuly.</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="prompt input_prompt">In&nbsp;[61]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">hraci</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Karel&quot;</span><span class="p">,</span> <span class="s2">&quot;Pepa&quot;</span><span class="p">,</span> <span class="s2">&quot;Libor&quot;</span><span class="p">,</span> <span class="s2">&quot;Jarek&quot;</span><span class="p">]</span>
@@ -12600,7 +12595,7 @@ Na pozici 3 je hráč Jarek
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="prompt input_prompt">In&nbsp;[62]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">hraci</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Karel&quot;</span><span class="p">,</span> <span class="s2">&quot;Pepa&quot;</span><span class="p">,</span> <span class="s2">&quot;Libor&quot;</span><span class="p">,</span> <span class="s2">&quot;Jarek&quot;</span><span class="p">]</span>
@@ -12657,20 +12652,20 @@ Na pozici 8 je hráč Jarek
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Užitečná funkce <code>zip</code> nám dokáže skombinovat několik iterovatelných objektů do n-tic tak, že každá n-tice obsahuje prvky na stejných pozicích z iterovatelných objektů.</p>
-<p>Protože je definována s proměnným počtem argumentů, poradí si s jakýmkoli množstvím zadaných iterovatelných objektů.</p>
+<p>Užitečná funkce <code>zip</code> nám dokáže zkombinovat několik iterovatelných objektů do n-tic tak, že každá n-tice obsahuje prvky na stejných pozicích z iterovatelných objektů.</p>
+<p>Protože je funkce definována s proměnným počtem argumentů, poradí si s jakýmkoli množstvím zadaných iterovatelných objektů.</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="prompt input_prompt">In&nbsp;[63]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">slovo</span> <span class="o">=</span> <span class="s2">&quot;slovo&quot;</span>
 <span class="n">cisla</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
-<span class="n">dalsi_slovo</span> <span class="o">=</span> <span class="s2">&quot;louka&quot;</span>
+<span class="n">ntice_slov</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;louka&quot;</span><span class="p">,</span> <span class="s2">&quot;paseka&quot;</span><span class="p">,</span> <span class="s2">&quot;mitina&quot;</span><span class="p">,</span> <span class="s2">&quot;vesnice&quot;</span><span class="p">,</span> <span class="s2">&quot;mesto&quot;</span><span class="p">)</span>
 <span class="n">kratsi_cisla</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
 
 <span class="nb">list</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">slovo</span><span class="p">))</span>
@@ -12686,7 +12681,7 @@ Na pozici 8 je hráč Jarek
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[22]:</div>
+<div class="prompt output_prompt">Out[63]:</div>
 
 
 
@@ -12705,14 +12700,14 @@ Na pozici 8 je hráč Jarek
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Volat funci <code>zip</code> s jedním argumentem moc nedává smysl, ale možné to je.</p>
+<p>Volat funci <code>zip</code> s jedním argumentem moc nedává smysl, ale možné to je:</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="prompt input_prompt">In&nbsp;[64]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">list</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">slovo</span><span class="p">,</span> <span class="n">cisla</span><span class="p">))</span>
@@ -12728,7 +12723,7 @@ Na pozici 8 je hráč Jarek
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[23]:</div>
+<div class="prompt output_prompt">Out[64]:</div>
 
 
 
@@ -12747,17 +12742,17 @@ Na pozici 8 je hráč Jarek
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Se dvěma argumenty už dostáváme jejich kombinace v n-ticích.</p>
+<p>Se dvěma argumenty už dostáváme jejich kombinace v n-ticích:</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="prompt input_prompt">In&nbsp;[65]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">list</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">cisla</span><span class="p">,</span> <span class="n">slovo</span><span class="p">,</span> <span class="n">dalsi_slovo</span><span class="p">))</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">list</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">cisla</span><span class="p">,</span> <span class="n">slovo</span><span class="p">,</span> <span class="n">ntice_slov</span><span class="p">))</span>
 </pre></div>
 
 </div>
@@ -12770,13 +12765,17 @@ Na pozici 8 je hráč Jarek
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[24]:</div>
+<div class="prompt output_prompt">Out[65]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>[(5, &#39;s&#39;, &#39;l&#39;), (4, &#39;l&#39;, &#39;o&#39;), (3, &#39;o&#39;, &#39;u&#39;), (2, &#39;v&#39;, &#39;k&#39;), (1, &#39;o&#39;, &#39;a&#39;)]</pre>
+<pre>[(5, &#39;s&#39;, &#39;louka&#39;),
+ (4, &#39;l&#39;, &#39;paseka&#39;),
+ (3, &#39;o&#39;, &#39;mitina&#39;),
+ (2, &#39;v&#39;, &#39;vesnice&#39;),
+ (1, &#39;o&#39;, &#39;mesto&#39;)]</pre>
 </div>
 
 </div>
@@ -12789,14 +12788,14 @@ Na pozici 8 je hráč Jarek
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>A se třeti to funguje úplně stejně.</p>
+<p>A se třemi to funguje úplně stejně.</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="prompt input_prompt">In&nbsp;[66]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">list</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">kratsi_cisla</span><span class="p">,</span> <span class="n">slovo</span><span class="p">))</span>
@@ -12812,7 +12811,7 @@ Na pozici 8 je hráč Jarek
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[25]:</div>
+<div class="prompt output_prompt">Out[66]:</div>
 
 
 
@@ -12831,7 +12830,7 @@ Na pozici 8 je hráč Jarek
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Pokud jsou argumenty různé délky, zip se bude řídit tím nejkratším z nich.</p>
+<p>Jak jste si možná všimly, pokud jsou argumenty různé délky, <code>zip</code> se bude řídit tím nejkratším z nich.</p>
 
 </div>
 </div>

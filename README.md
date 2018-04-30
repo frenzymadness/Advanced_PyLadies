@@ -25,7 +25,7 @@ První návrh osnovy pokročilého kurzu, který se bude v závisloti na vývoji
 9. Argumenty příkazové řádky a modul `argparse`
 10. Iterátory a generátory
 11. Paralelizace - vlákna a procesy
-12. Datum a čas
+12. Datum, čas a časové zóny
 13. Regulární výrazy
 14. Pokročilejší formátování výstupů II
 15. Logování

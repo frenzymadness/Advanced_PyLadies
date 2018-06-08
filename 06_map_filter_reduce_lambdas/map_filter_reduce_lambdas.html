@@ -12096,11 +12096,12 @@ div#notebook {
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Poslední z trojice dnes jmenovaných bude funkce <code>reduce</code>. Ta umí provést na sekvenci prvků nějaký výpočet (či jinou akci), který se provede postupně na všech dvojicích prvků. Dvojice prvků se pak nahradí výsledkem a takto se postupuje tak dlouho, dokud nezůstane v sekvenci jen jeden prvek.</p>
+<p>Poslední z trojice dnes jmenovaných bude funkce <code>reduce</code>. Ta vezme funkci akceptující dva parametry a postupně ji aplikuje na prvky sekvence, zleva doprava. Výsledek předchozí aplikace se vždy použije jako první parametr funkce a jako druhý parametr se použije další nezpracovaný prvek sekvence. Takto postupuje dokud nezredukuje sekvenci na jednu výslednou hodnotu.</p>
 <p>Funkce <code>reduce</code> není, narozdíl od ostatních dnes jmenovaných, automaticky dostupná a musí se importovat z modulu <code>functools</code>.</p>
 <p>Na první pohled složitý slovní popis skrývá jednoduchý princip s řadou možností. Pojďme například vynásobit čísla v sekvenci.</p>
 <p>Opět začneme funkcí pro násobení:</p>
@@ -12265,13 +12266,14 @@ div#notebook {
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Definice anonymní funkce začíná klíčovým slovem <code>lambda</code> a pokračuje seznamem argumentů, které jsou klasicky oddelěné čárkou. Za argumenty pak následuje dvojtečka a za ní výraz, který se má vyhodnotit a jehož výsledek se vrátí jako návratová hodnota.</p>
 <p>S takto definovanou anonymní funkcí se toho ale moc dělat nedá, protože je anonymní a nemáme tak možnost ji jinde v programu použít.</p>
-<p>Mohli bychom si ji samozřejmě přiřadit do proměnné a následně ji volat jménem, ale to už bychom si klidně mohli definovat klasickou funkci. Daleko lepší použití se nabízí v kombinaci s funkcemi, které berou funkce jako vstupní argumenty. Například právě <code>map</code>, <code>filter</code> nebo <code>reduce</code>. Pojďme si ukázat dva poslední příklady s využitím anonymních funkcí:</p>
+<p>Mohli bychom si ji samozřejmě přiřadit do proměnné a následně ji volat jménem, ale to už bychom si klidně mohli definovat klasickou funkci. Daleko lepší použití se nabízí v kombinaci s funkcemi, které berou jiné funkce jako vstupní argumenty. Například právě <code>map</code>, <code>filter</code> nebo <code>reduce</code>. Pojďme si ukázat dva poslední příklady s využitím anonymních funkcí:</p>
 
 </div>
 </div>
@@ -12313,11 +12315,12 @@ div#notebook {
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Příklad se od původního téměř neliší. Hlavní rozdíl je v tom, že jsme si pro jednoduchou matematickou operaci násobení nemuseli definovat klasickou pojmenovanou funkci, která by nám zabrala minimálně dva řádky. Místo toho jsme využili anonymní funkci a jeji definici napsali přímo jako argument funkce <code>reduce</code>.</p>
+<p>Příklad se od původního téměř neliší. Hlavní rozdíl je v tom, že jsme si pro jednoduchou matematickou operaci násobení nemuseli definovat klasickou pojmenovanou funkci, která by nám zabrala minimálně dva řádky. Místo toho jsme využili anonymní funkci a její definici napsali přímo jako argument funkce <code>reduce</code>.</p>
 
 </div>
 </div>

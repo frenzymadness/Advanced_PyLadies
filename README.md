@@ -20,7 +20,7 @@ První návrh osnovy pokročilého kurzu, který se bude v závisloti na vývoji
 4. [Pokročilejší formátování výstupů pomocí metody `format()`, f-stringy](04_format_pprint/format.ipynb) a [`pprint`](04_format_pprint/pprint.ipynb)
 5. [Speciální datové typy z modulu `collections`](05_collections_comprehensions/collections.ipynb) + [List/dictionary comprehensions](05_collections_comprehensions/list_dict_comprehensions.ipynb)
 6. [`map`, `filter`, `reduce` a anonymní funkce](06_map_filter_reduce_lambdas/map_filter_reduce_lambdas.ipynb)
-7. Funkce vyššího řádu, dekorátory a modul `functools`
+7. [Funkce vyššího řádu, dekorátory a modul `functools`](07_decorators_functools/decorators_functools.ipynb)
 8. Argumenty příkazové řádky a modul `argparse`
 9. Iterátory a generátory
 10. Paralelizace - vlákna a procesy

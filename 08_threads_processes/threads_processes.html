@@ -11812,7 +11812,7 @@ div#notebook {
 <p>Nejdříve si vysvětlíme základní pojmy, aby se nám pak dobře chápaly rozdíly mezi koncepty.</p>
 <p><strong>Sekvenční</strong> programy známe ze všech nejlépe. Jejich implementace je sadou příkazů a výpočtů, které se provedou jeden po druhém a na konci je doručen nějaký výsledek.</p>
 <p><strong>Paralelní</strong> programy jsou napsané tak, aby výpočty v nich obsažené mohly běžet paralelně - tedy aby v jednu chvíli mohl probíhat i více než jeden výpočet či nějaká operace.</p>
-<p>Představte si hromadu dřeva ke štípání na zimu. U sekvenčního programování na to bude člověk sám a bude si brát polena jedno po druhém a bude je štípat, dokud nebude hotov. U paralelního přístupu se ke štípání přidá celá rodina a polena jsou tak zpracovávána několika lidmi v jeden okamžik.</p>
+<p>Představte si hromadu dřeva ke štípání na zimu. U sekvenčního programování na to bude člověk sám a bude si brát polena jedno po druhém a bude je štípat, dokud nebude hotov. U paralelního přístupu se ke štípání přidá celá rodina a polena jsou tak zpracovávána několika lidmi zároveň.</p>
 <p><strong>Konkurenční</strong> programy jsou něco mezi sekvenčními a paralelními. Jednotlivé úlohy ke zpracování se sice mohou překrývat - v tom smyslu, že mezi začátkem a koncem jedné úlohy se může pracovat i na jiné úloze - ale nikdy není možné pracovat na dvou úlohách v tu samou chvíli.</p>
 <p>Jako dobrý příklad poslouží náš každodenní rytmus. Běžný člověk vždy dělá jen jednu věc, ale může její dělání přerušit a v mezičase se věnovat něčemu jinému, a pak se k původní činnosti zase vrátit. Například začnete pracovat na domácím projektu, v polovině práci přerušíte a jdete si uvařit čaj. Než se ohřeje voda, umyjete nádobí. Pak doděláte čaj a vracíte se zpět k počítači pracovat na domácím projektu. Máme tady tři činnosti, které se mezi sebou překrývají, ale vždy se pracuje jen na jedné z nich.</p>
 
@@ -11891,7 +11891,7 @@ div#notebook {
 </ul>
 <p>V obou případech, pokud se jedná o přístup ke sdílené paměti, je potřeba přístupy synchronizovat, aby se nestalo, že jeden proces/vlákno přepisuje data, která potřebuje jiný proces/vlákno.</p>
 <h3 id="Chyby">Chyby<a class="anchor-link" href="#Chyby">&#182;</a></h3><ul>
-<li><strong>P</strong>: Chyba v procesu neovlivní žádný další proces.</li>
+<li><strong>P</strong>: Chyba v procesu neovlivní žádný další proces (kromě případů zanesení chyby do sdílené paměti).</li>
 <li><strong>V</strong>: Chyba v jednom vlákně může shodit celý proces a ukončit tak všechna běžící vlákna.</li>
 </ul>
 
@@ -11956,7 +11956,7 @@ div#notebook {
     <span class="n">PEP</span> <span class="o">=</span> <span class="n">PEP</span><span class="o">.</span><span class="n">zfill</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
     <span class="n">url</span> <span class="o">=</span> <span class="n">f</span><span class="s2">&quot;https://www.python.org/dev/peps/pep-</span><span class="si">{PEP}</span><span class="s2">/&quot;</span>
     <span class="n">html</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span><span class="o">.</span><span class="n">text</span>
-    <span class="n">search</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="s1">&#39;&lt;title&gt;(.*)&lt;/title&#39;</span><span class="p">,</span> <span class="n">html</span><span class="p">,</span> <span class="n">re</span><span class="o">.</span><span class="n">IGNORECASE</span><span class="p">)</span>
+    <span class="n">search</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="s1">&#39;&lt;title&gt;(.*)&lt;/title&gt;&#39;</span><span class="p">,</span> <span class="n">html</span><span class="p">,</span> <span class="n">re</span><span class="o">.</span><span class="n">IGNORECASE</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">search</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
 </pre></div>
 

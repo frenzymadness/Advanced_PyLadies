@@ -22,7 +22,7 @@ První návrh osnovy pokročilého kurzu, který se bude v závisloti na vývoji
 6. [`map`, `filter`, `reduce` a anonymní funkce](06_map_filter_reduce_lambdas/map_filter_reduce_lambdas.ipynb)
 7. [Funkce vyššího řádu, dekorátory a modul `functools`](07_decorators_functools/decorators_functools.ipynb)
 10. [Vlákna a procesy](08_threads_processes/threads_processes.ipynb)
-11. [Vlákna a procesy podruhé](08_threads_processes_2/threads_processes_2.ipynb)
+11. [Vlákna a procesy podruhé](09_threads_processes_2/threads_processes_2.ipynb)
 8. Argumenty příkazové řádky a modul `argparse`
 9. Iterátory a generátory
 11. Datum, čas a časové zóny

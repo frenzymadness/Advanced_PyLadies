@@ -12052,14 +12052,13 @@ div#notebook {
     
     <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
-            <span class="n">integer</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
+            <span class="n">integer</span> <span class="o">=</span> <span class="n">randint</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">queue</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="n">integer</span><span class="p">)</span>
             <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;</span><span class="si">{integer}</span><span class="s1"> put to queue by </span><span class="si">{self.name}</span><span class="s1">&#39;</span><span class="p">)</span>
 
             
 <span class="k">class</span> <span class="nc">Consumer</span><span class="p">(</span><span class="n">Thread</span><span class="p">):</span>
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">queue</span><span class="p">):</span>
-
         <span class="n">Thread</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">queue</span> <span class="o">=</span> <span class="n">queue</span>
     
@@ -12116,26 +12115,26 @@ div#notebook {
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>218 put to queue by Thread-658
-812 put to queue by Thread-658
-819 put to queue by Thread-658
-69 put to queue by Thread-658
-72 put to queue by Thread-658
-218 popped from list by Thread-659
-812 popped from list by Thread-659
-819 popped from list by Thread-659
-69 popped from list by Thread-659
-72 popped from list by Thread-659
-238 put to queue by Thread-660
-89 put to queue by Thread-660
-92 put to queue by Thread-660
-687 put to queue by Thread-660
-156 put to queue by Thread-660
-238 popped from list by Thread-65989 popped from list by Thread-661
-92 popped from list by Thread-661
-687 popped from list by Thread-661
-156 popped from list by Thread-661
+<pre>737 put to queue by Thread-38
+568 put to queue by Thread-38
+541 put to queue by Thread-38
+115 put to queue by Thread-38
+384 put to queue by Thread-38
+737 popped from list by Thread-39
+568 popped from list by Thread-39
+541 popped from list by Thread-39
+115 popped from list by Thread-39
+384 popped from list by Thread-39
+384 put to queue by Thread-40384 popped from list by Thread-39
 
+233 put to queue by Thread-40
+559 put to queue by Thread-40
+789 put to queue by Thread-40
+233 popped from list by Thread-39729 put to queue by Thread-40
+
+559 popped from list by Thread-39
+789 popped from list by Thread-39
+729 popped from list by Thread-39
 </pre>
 </div>
 </div>
@@ -12248,42 +12247,42 @@ div#notebook {
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Thread-662 startingThread-663 starting
-Thread-663 is working
+<pre>Thread-20 starting
+Thread-20 is working
+Thread-21 starting
+Thread-21 is working
+Thread-22 startingThread-23 starting
 
-Thread-662 is working
-Thread-664 startingThread-665 starting
+Thread-24 starting
+Thread-25 starting
+Thread-21 is working
+Thread-20 is working
+Thread-21 is working
+Thread-20 is working
+Thread-21 is working
+Thread-20 is working
+Thread-24 is workingThread-21 is done
 
-Thread-666 starting
-Thread-667 starting
-Thread-663 is working
-Thread-662 is working
-Thread-663 is working
-Thread-662 is working
-Thread-663 is working
-Thread-662 is working
-Thread-663 is doneThread-665 is working
+Thread-20 is doneThread-23 is working
 
-Thread-662 is doneThread-664 is working
+Thread-24 is working
+Thread-24 is working
+Thread-23 is working
+Thread-24 is working
+Thread-23 is working
+Thread-23 is working
+Thread-24 is doneThread-22 is working
 
-Thread-665 is working
-Thread-664 is working
-Thread-665 is working
-Thread-664 is working
-Thread-665 is working
-Thread-664 is working
-Thread-665 is doneThread-666 is working
+Thread-23 is doneThread-25 is working
 
-Thread-664 is doneThread-667 is working
-
-Thread-666 is working
-Thread-666 is working
-Thread-667 is working
-Thread-667 is working
-Thread-666 is working
-Thread-667 is working
-Thread-666 is done
-Thread-667 is done
+Thread-22 is working
+Thread-25 is working
+Thread-22 is working
+Thread-22 is working
+Thread-25 is working
+Thread-22 is done
+Thread-25 is working
+Thread-25 is done
 </pre>
 </div>
 </div>

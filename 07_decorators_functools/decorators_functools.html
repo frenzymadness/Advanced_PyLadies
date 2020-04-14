@@ -13134,7 +13134,10 @@ div#notebook {
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">secti</span><span class="p">(</span><span class="n">cisla</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Funkce pro sečtení sekvence čísel&quot;&quot;&quot;</span>
-    <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="n">cisla</span><span class="p">)</span>
+    <span class="n">vysledek</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">cislo</span> <span class="ow">in</span> <span class="n">cisla</span><span class="p">:</span>
+        <span class="n">vysledek</span> <span class="o">+=</span> <span class="n">cislo</span>
+    <span class="k">return</span> <span class="n">vysledek</span>
 </pre></div>
 
     </div>
@@ -13302,6 +13305,7 @@ div#notebook {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Jako první argument jsme definovali anonymní funkci, která jednoduše spojí řetězce pomocí mezery do jednoho. Druhý argument pak obsahuje seznam tří řetězců.</p>
+<p>Tento koncept už známe z minula. Teď je na čase se na něj podívat z druhé strany.</p>
 
 </div>
 </div>
@@ -13837,7 +13841,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Samozřejmě pouze v případě, že se dá výsledek na desetinné číslo převést. I tato situace by se však dala bez problému v dekorátoru ošetřit.</p>
+<p>Použití dekorátoru nad definicí funkce pomocí <code>@</code> není žádná magie. Jedná se jen o tzv. syntaktický cukr, který usnadňuje zápis a umožňuje velmi snadno použít i více dekorátorů. Bez tohoto cukru bychom mohli dekorátor použít i takto:</p>
 
 </div>
 </div>
@@ -13847,7 +13851,76 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[24]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">secti</span><span class="p">(</span><span class="s2">&quot;Yet&quot;</span><span class="p">,</span> <span class="s2">&quot;ti&quot;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">secti</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">secti_float</span> <span class="o">=</span> <span class="n">desetinne_cislo</span><span class="p">(</span><span class="n">secti</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">secti_float</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[26]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>3.0</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Tento zůsob manuálního použití děkorátoru má tu výhodu, že původní funkce je stále dostupná pod svým originálním jménem.</p>
+<p>Funkce funguje samozřejmě pouze v případě, že se dá výsledek na desetinné číslo převést. I tato situace by se však dala bez problému v dekorátoru ošetřit.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered celltag_raises-exception">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">secti_float</span><span class="p">(</span><span class="s2">&quot;Yet&quot;</span><span class="p">,</span> <span class="s2">&quot;ti&quot;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13867,8 +13940,8 @@ div#notebook {
 <pre>
 <span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">ValueError</span>                                Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-24-76cc3d1520c5&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-fg">()</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>secti<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#34;Yet&#34;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#34;ti&#34;</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-fg">&lt;ipython-input-27-bb2597dd6e94&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>secti_float<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#34;Yet&#34;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#34;ti&#34;</span><span class="ansi-blue-fg">)</span>
 
 <span class="ansi-green-fg">&lt;ipython-input-20-3650eddf3d95&gt;</span> in <span class="ansi-cyan-fg">nova_funkce</span><span class="ansi-blue-fg">(*args, **kwargs)</span>
 <span class="ansi-green-intense-fg ansi-bold">      3</span>     <span class="ansi-green-fg">def</span> nova_funkce<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>args<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kwargs<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
@@ -13896,7 +13969,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">zmer_cas</span><span class="p">(</span><span class="n">puvodni_funkce</span><span class="p">):</span>
@@ -13928,7 +14001,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nd">@zmer_cas</span>
@@ -13943,7 +14016,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">mocnina_dvojky</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
@@ -13963,15 +14036,15 @@ div#notebook {
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Volám funkci &lt;function mocnina_dvojky at 0x7f84a44850d0&gt; s argumenty (10,)
-Funkce běžela 0.0004894733428955078 sekund
+<pre>Volám funkci &lt;function mocnina_dvojky at 0x7f84a02284c0&gt; s argumenty (10,)
+Funkce běžela 0.000118255615234375 sekund
 </pre>
 </div>
 </div>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[27]:</div>
+    <div class="prompt output_prompt">Out[30]:</div>
 
 
 
@@ -13988,7 +14061,7 @@ Funkce běžela 0.0004894733428955078 sekund
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="prompt input_prompt">In&nbsp;[31]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">vysledek</span> <span class="o">=</span> <span class="n">mocnina_dvojky</span><span class="p">(</span><span class="mi">10000000</span><span class="p">)</span>
@@ -14008,8 +14081,8 @@ Funkce běžela 0.0004894733428955078 sekund
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Volám funkci &lt;function mocnina_dvojky at 0x7f84a44850d0&gt; s argumenty (10000000,)
-Funkce běžela 0.05572390556335449 sekund
+<pre>Volám funkci &lt;function mocnina_dvojky at 0x7f84a02284c0&gt; s argumenty (10000000,)
+Funkce běžela 0.038305044174194336 sekund
 </pre>
 </div>
 </div>
@@ -14052,7 +14125,7 @@ Funkce běžela 0.05572390556335449 sekund
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[29]:</div>
+<div class="prompt input_prompt">In&nbsp;[32]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">lru_cache</span>
@@ -14079,7 +14152,7 @@ Funkce běžela 0.05572390556335449 sekund
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[30]:</div>
+<div class="prompt input_prompt">In&nbsp;[33]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="p">[</span><span class="n">fib</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">16</span><span class="p">)]</span>
@@ -14095,7 +14168,7 @@ Funkce běžela 0.05572390556335449 sekund
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[30]:</div>
+    <div class="prompt output_prompt">Out[33]:</div>
 
 
 
@@ -14120,7 +14193,7 @@ Funkce běžela 0.05572390556335449 sekund
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[31]:</div>
+<div class="prompt input_prompt">In&nbsp;[34]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">fib</span><span class="o">.</span><span class="n">cache_info</span><span class="p">()</span>
@@ -14136,7 +14209,7 @@ Funkce běžela 0.05572390556335449 sekund
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[31]:</div>
+    <div class="prompt output_prompt">Out[34]:</div>
 
 
 
@@ -14177,7 +14250,7 @@ Funkce běžela 0.05572390556335449 sekund
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[32]:</div>
+<div class="prompt input_prompt">In&nbsp;[35]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">partial</span>
@@ -14236,7 +14309,7 @@ Funkce běžela 0.05572390556335449 sekund
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[33]:</div>
+<div class="prompt input_prompt">In&nbsp;[36]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">singledispatch</span>
@@ -14261,7 +14334,7 @@ Funkce běžela 0.05572390556335449 sekund
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[34]:</div>
+<div class="prompt input_prompt">In&nbsp;[37]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nd">@funkce</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
@@ -14284,7 +14357,7 @@ Funkce běžela 0.05572390556335449 sekund
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[35]:</div>
+<div class="prompt input_prompt">In&nbsp;[38]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nd">@funkce</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
@@ -14308,7 +14381,7 @@ Funkce běžela 0.05572390556335449 sekund
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[36]:</div>
+<div class="prompt input_prompt">In&nbsp;[39]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">funkce</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
@@ -14339,7 +14412,7 @@ Funkce běžela 0.05572390556335449 sekund
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[37]:</div>
+<div class="prompt input_prompt">In&nbsp;[40]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">funkce</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
@@ -14370,7 +14443,7 @@ Funkce běžela 0.05572390556335449 sekund
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[38]:</div>
+<div class="prompt input_prompt">In&nbsp;[41]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">funkce</span><span class="p">(</span><span class="s2">&quot;Pepa&quot;</span><span class="p">)</span>
@@ -14409,7 +14482,7 @@ Funkce běžela 0.05572390556335449 sekund
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[39]:</div>
+<div class="prompt input_prompt">In&nbsp;[42]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">funkce</span><span class="p">({</span><span class="s2">&quot;jméno&quot;</span><span class="p">:</span> <span class="s2">&quot;Karel&quot;</span><span class="p">})</span>
@@ -14493,7 +14566,7 @@ Funkce běžela 0.05572390556335449 sekund
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[40]:</div>
+<div class="prompt input_prompt">In&nbsp;[43]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">sude_liche</span><span class="p">(</span><span class="n">cislo</span><span class="p">):</span>
@@ -14518,7 +14591,7 @@ Funkce běžela 0.05572390556335449 sekund
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[41]:</div>
+<div class="prompt input_prompt">In&nbsp;[44]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">sude_liche_2</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="p">(</span><span class="n">x</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="s1">&#39;sudé&#39;</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="s1">&#39;liché&#39;</span><span class="p">)</span>
@@ -14539,7 +14612,7 @@ Funkce běžela 0.05572390556335449 sekund
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[42]:</div>
+<div class="prompt input_prompt">In&nbsp;[45]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">sude_liche</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
@@ -14555,7 +14628,7 @@ Funkce běžela 0.05572390556335449 sekund
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[42]:</div>
+    <div class="prompt output_prompt">Out[45]:</div>
 
 
 
@@ -14572,7 +14645,7 @@ Funkce běžela 0.05572390556335449 sekund
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[43]:</div>
+<div class="prompt input_prompt">In&nbsp;[46]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">sude_liche_2</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
@@ -14588,7 +14661,7 @@ Funkce běžela 0.05572390556335449 sekund
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[43]:</div>
+    <div class="prompt output_prompt">Out[46]:</div>
 
 
 
@@ -14614,7 +14687,7 @@ Funkce běžela 0.05572390556335449 sekund
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[44]:</div>
+<div class="prompt input_prompt">In&nbsp;[47]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="mi">1</span>
@@ -14651,7 +14724,7 @@ Funkce běžela 0.05572390556335449 sekund
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[45]:</div>
+<div class="prompt input_prompt">In&nbsp;[48]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">get_n</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
@@ -14686,7 +14759,7 @@ Funkce běžela 0.05572390556335449 sekund
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[45]:</div>
+    <div class="prompt output_prompt">Out[48]:</div>
 
 
 

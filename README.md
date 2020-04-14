@@ -24,7 +24,7 @@ První návrh osnovy pokročilého kurzu, který se bude v závisloti na vývoji
 10. [Vlákna a procesy](08_threads_processes/threads_processes.ipynb)
 11. [Vlákna a procesy podruhé](09_threads_processes_2/threads_processes_2.ipynb)
 8. Argumenty příkazové řádky a modul `argparse`
-9. Iterátory a generátory
+9. [Iterátory a generátory](11_iterators_generators/iterators_generators.ipynb)
 11. Datum, čas a časové zóny
 12. Regulární výrazy
 13. Pokročilejší formátování výstupů II

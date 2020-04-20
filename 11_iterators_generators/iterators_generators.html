@@ -13079,14 +13079,14 @@ div#notebook {
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Iterables,-iterators,-generators-&amp;-range">Iterables, iterators, generators &amp; range<a class="anchor-link" href="#Iterables,-iterators,-generators-&amp;-range">&#182;</a></h1><p>Dnes se společně podíváme na to, co se vlastně děje na pozadí cyklu <code>for</code> a jak si můžeme iterování skrz prvky nějaké sekvence upravit dle libosti.</p>
 <h2 id="Iterables-(iterovateln&#233;-objekty)">Iterables (iterovateln&#233; objekty)<a class="anchor-link" href="#Iterables-(iterovateln&#233;-objekty)">&#182;</a></h2><p>Iterovatelné objekty jsou zjednodušeně řečeno všechny objekty v Pythonu, které se dají procházet prvek za prvkem a dají se tedy podstrčit cyklu <code>for</code>.</p>
-<p>Jako n-tice</p>
+<p>Jako například n-tice</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">cislo</span> <span class="ow">in</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">:</span>
@@ -13094,6 +13094,26 @@ div#notebook {
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>1
+2
+3
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -13108,7 +13128,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">cislo</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]:</span>
@@ -13116,6 +13136,26 @@ div#notebook {
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>4
+5
+6
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -13130,7 +13170,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">cislo</span> <span class="ow">in</span> <span class="s2">&quot;789&quot;</span><span class="p">:</span>
@@ -13138,6 +13178,26 @@ div#notebook {
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>7
+8
+9
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -13152,7 +13212,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">itertools</span> <span class="kn">import</span> <span class="n">count</span>
@@ -13162,6 +13222,26 @@ div#notebook {
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[4]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>count(100, 5)</pre>
+</div>
+
+</div>
+
 </div>
 </div>
 
@@ -13244,7 +13324,7 @@ div#notebook {
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;str_iterator at 0x7fdf002539a0&gt;</pre>
+<pre>&lt;str_iterator at 0x56de4a8&gt;</pre>
 </div>
 
 </div>
@@ -13383,12 +13463,12 @@ div#notebook {
 
 <div class="output_subarea output_text output_error">
 <pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">StopIteration</span>                             Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-10-4ce711c44abc&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>next<span class="ansi-blue-fg">(</span>iterator<span class="ansi-blue-fg">)</span>
+<span class="ansi-red-intense-fg ansi-bold">---------------------------------------------------------------------------</span>
+<span class="ansi-red-intense-fg ansi-bold">StopIteration</span>                             Traceback (most recent call last)
+<span class="ansi-green-intense-fg ansi-bold">&lt;ipython-input-10-4ce711c44abc&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-intense-fg ansi-bold">----&gt; 1</span><span class="ansi-yellow-intense-fg ansi-bold"> </span>next<span class="ansi-yellow-intense-fg ansi-bold">(</span>iterator<span class="ansi-yellow-intense-fg ansi-bold">)</span>
 
-<span class="ansi-red-fg">StopIteration</span>: </pre>
+<span class="ansi-red-intense-fg ansi-bold">StopIteration</span>: </pre>
 </div>
 </div>
 
@@ -13407,7 +13487,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Reimplementace-cyklu-for">Reimplementace cyklu for<a class="anchor-link" href="#Reimplementace-cyklu-for">&#182;</a></h2><p>Když už tušíme, jaký je rozdíl mezi iterovatelým objektem a iterátorem, můžeme si zkusit implementovat vlastní cyklus <code>for</code>:</p>
+<h2 id="Reimplementace-cyklu-for">Reimplementace cyklu <code>for</code><a class="anchor-link" href="#Reimplementace-cyklu-for">&#182;</a></h2><p>Když už tušíme, jaký je rozdíl mezi iterovatelým objektem a iterátorem, můžeme si zkusit implementovat vlastní cyklus <code>for</code>:</p>
 
 </div>
 </div>
@@ -13551,7 +13631,7 @@ a
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;enumerate at 0x7fdf0020f680&gt;</pre>
+<pre>&lt;enumerate at 0x5b5de68&gt;</pre>
 </div>
 
 </div>
@@ -13695,7 +13775,7 @@ a
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;__main__.MocninyDvojky at 0x7fdf00195070&gt;</pre>
+<pre>&lt;__main__.MocninyDvojky at 0x598f328&gt;</pre>
 </div>
 
 </div>
@@ -13859,18 +13939,18 @@ a
 
 <div class="output_subarea output_text output_error">
 <pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">StopIteration</span>                             Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-23-4ce711c44abc&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>next<span class="ansi-blue-fg">(</span>iterator<span class="ansi-blue-fg">)</span>
+<span class="ansi-red-intense-fg ansi-bold">---------------------------------------------------------------------------</span>
+<span class="ansi-red-intense-fg ansi-bold">StopIteration</span>                             Traceback (most recent call last)
+<span class="ansi-green-intense-fg ansi-bold">&lt;ipython-input-23-4ce711c44abc&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-intense-fg ansi-bold">----&gt; 1</span><span class="ansi-yellow-intense-fg ansi-bold"> </span>next<span class="ansi-yellow-intense-fg ansi-bold">(</span>iterator<span class="ansi-yellow-intense-fg ansi-bold">)</span>
 
-<span class="ansi-green-fg">&lt;ipython-input-17-1997b0b82e10&gt;</span> in <span class="ansi-cyan-fg">__next__</span><span class="ansi-blue-fg">(self)</span>
-<span class="ansi-green-intense-fg ansi-bold">     12</span>         vysledek <span class="ansi-blue-fg">=</span> <span class="ansi-cyan-fg">2</span> <span class="ansi-blue-fg">**</span> self<span class="ansi-blue-fg">.</span>exponent
-<span class="ansi-green-intense-fg ansi-bold">     13</span>         <span class="ansi-green-fg">if</span> vysledek <span class="ansi-blue-fg">&gt;</span> self<span class="ansi-blue-fg">.</span>maximum<span class="ansi-blue-fg">:</span>
-<span class="ansi-green-fg">---&gt; 14</span><span class="ansi-red-fg">             </span><span class="ansi-green-fg">raise</span> StopIteration
-<span class="ansi-green-intense-fg ansi-bold">     15</span>         <span class="ansi-green-fg">return</span> vysledek
+<span class="ansi-green-intense-fg ansi-bold">&lt;ipython-input-17-1997b0b82e10&gt;</span> in <span class="ansi-cyan-fg">__next__</span><span class="ansi-blue-intense-fg ansi-bold">(self)</span>
+<span class="ansi-green-fg">     12</span>         vysledek <span class="ansi-yellow-intense-fg ansi-bold">=</span> <span class="ansi-cyan-intense-fg ansi-bold">2</span> <span class="ansi-yellow-intense-fg ansi-bold">**</span> self<span class="ansi-yellow-intense-fg ansi-bold">.</span>exponent
+<span class="ansi-green-fg">     13</span>         <span class="ansi-green-intense-fg ansi-bold">if</span> vysledek <span class="ansi-yellow-intense-fg ansi-bold">&gt;</span> self<span class="ansi-yellow-intense-fg ansi-bold">.</span>maximum<span class="ansi-yellow-intense-fg ansi-bold">:</span>
+<span class="ansi-green-intense-fg ansi-bold">---&gt; 14</span><span class="ansi-yellow-intense-fg ansi-bold">             </span><span class="ansi-green-intense-fg ansi-bold">raise</span> StopIteration
+<span class="ansi-green-fg">     15</span>         <span class="ansi-green-intense-fg ansi-bold">return</span> vysledek
 
-<span class="ansi-red-fg">StopIteration</span>: </pre>
+<span class="ansi-red-intense-fg ansi-bold">StopIteration</span>: </pre>
 </div>
 </div>
 
@@ -13881,7 +13961,7 @@ a
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Došli jsme na konec iterátoru a dostali jsme očekávanou výjimku. Když ovšem stejný iterátor použijeme ve <code>for</code>cyklu, bude fungovat. Jak je to možné? Je to proto, že <code>for</code> cyklus zavolá na iterátoru funkci <code>iter</code>, která zavolá metodu <code>__iter__</code>, která iterátor spustí od začátku.</p>
+<p>Došli jsme na konec iterátoru a dostali jsme očekávanou výjimku. Když ovšem stejný iterátor použijeme ve <code>for</code> cyklu, bude fungovat. Jak je to možné? Je to proto, že <code>for</code> cyklus zavolá na iterátoru funkci <code>iter</code>, která zavolá metodu <code>__iter__</code>, která iterátor spustí od začátku.</p>
 
 </div>
 </div>
@@ -13925,7 +14005,7 @@ a
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Na takovou jednoduchou úlohu je toho kódu ale nějak moc. Pojďme se podívat, jak to samé udělat pomocí funkce. Iterátoru definovanému pomocí funkce nebo výrazu se říká generátor. Generátory jsou podmnožinou iterátorů a fungují velmi podobně. Jen mají tu výhodu, že nemusíme vše implementovat manuálně.</p>
+<p>Na takovou jednoduchou úlohu je toho kódu ale nějak moc. Pojďme se podívat, jak to stejné udělat pomocí funkce. Iterátoru definovanému pomocí funkce nebo výrazu se říká generátor. Generátory jsou podmnožinou iterátorů a fungují velmi podobně. Jen mají tu výhodu, že nemusíme vše implementovat manuálně.</p>
 <h3 id="Funkce">Funkce<a class="anchor-link" href="#Funkce">&#182;</a></h3><p>Funkcí definovaný generátor používá místo příkazu <code>return</code> příkaz <code>yield</code>. Jakmile se ve funkci dojde k <code>yield</code>, funkce se zastaví a vrátí hodnotu za <code>yield</code>. Při dalším zavolání funkce se pak spustí tam, kde předtím skončila.</p>
 
 </div>
@@ -13976,7 +14056,7 @@ a
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;generator object mocniny_dvojky at 0x7fdf0020e890&gt;</pre>
+<pre>&lt;generator object mocniny_dvojky at 0x05988300&gt;</pre>
 </div>
 
 </div>
@@ -14173,12 +14253,12 @@ a
 
 <div class="output_subarea output_text output_error">
 <pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">StopIteration</span>                             Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-32-323ce5d717bb&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>next<span class="ansi-blue-fg">(</span>generator<span class="ansi-blue-fg">)</span>
+<span class="ansi-red-intense-fg ansi-bold">---------------------------------------------------------------------------</span>
+<span class="ansi-red-intense-fg ansi-bold">StopIteration</span>                             Traceback (most recent call last)
+<span class="ansi-green-intense-fg ansi-bold">&lt;ipython-input-32-323ce5d717bb&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-intense-fg ansi-bold">----&gt; 1</span><span class="ansi-yellow-intense-fg ansi-bold"> </span>next<span class="ansi-yellow-intense-fg ansi-bold">(</span>generator<span class="ansi-yellow-intense-fg ansi-bold">)</span>
 
-<span class="ansi-red-fg">StopIteration</span>: </pre>
+<span class="ansi-red-intense-fg ansi-bold">StopIteration</span>: </pre>
 </div>
 </div>
 
@@ -14189,7 +14269,7 @@ a
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Vyvolání <code>StopIteration</code> je v tomto případě zcela automatické a stane se tak, když je generátor ukončem pomocí <code>return</code>. To se v našem případě stane, když ukončíme <code>while</code> cyklus a ve funkci už není kam pokračovat.</p>
+<p>Vyvolání <code>StopIteration</code> je v tomto případě zcela automatické a stane se tak, když je generátor ukončen pomocí <code>return</code>. To se v našem případě stane, když ukončíme <code>while</code> cyklus a ve funkci už není kam pokračovat.</p>
 
 </div>
 </div>
@@ -14460,7 +14540,7 @@ a
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>87616</pre>
+<pre>43808</pre>
 </div>
 
 </div>
@@ -14493,7 +14573,7 @@ a
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>112</pre>
+<pre>56</pre>
 </div>
 
 </div>
@@ -14587,12 +14667,12 @@ a
 
 <div class="output_subarea output_text output_error">
 <pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">TypeError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-46-be9266db3dfd&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>len<span class="ansi-blue-fg">(</span>iterator<span class="ansi-blue-fg">)</span>
+<span class="ansi-red-intense-fg ansi-bold">---------------------------------------------------------------------------</span>
+<span class="ansi-red-intense-fg ansi-bold">TypeError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-intense-fg ansi-bold">&lt;ipython-input-46-be9266db3dfd&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-intense-fg ansi-bold">----&gt; 1</span><span class="ansi-yellow-intense-fg ansi-bold"> </span>len<span class="ansi-yellow-intense-fg ansi-bold">(</span>iterator<span class="ansi-yellow-intense-fg ansi-bold">)</span>
 
-<span class="ansi-red-fg">TypeError</span>: object of type &#39;str_iterator&#39; has no len()</pre>
+<span class="ansi-red-intense-fg ansi-bold">TypeError</span>: object of type &#39;str_iterator&#39; has no len()</pre>
 </div>
 </div>
 
@@ -14631,12 +14711,12 @@ a
 
 <div class="output_subarea output_text output_error">
 <pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">TypeError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-47-edf4e4d37d62&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>iterator<span class="ansi-blue-fg">[</span><span class="ansi-cyan-fg">2</span><span class="ansi-blue-fg">]</span>
+<span class="ansi-red-intense-fg ansi-bold">---------------------------------------------------------------------------</span>
+<span class="ansi-red-intense-fg ansi-bold">TypeError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-intense-fg ansi-bold">&lt;ipython-input-47-edf4e4d37d62&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-intense-fg ansi-bold">----&gt; 1</span><span class="ansi-yellow-intense-fg ansi-bold"> </span>iterator<span class="ansi-yellow-intense-fg ansi-bold">[</span><span class="ansi-cyan-intense-fg ansi-bold">2</span><span class="ansi-yellow-intense-fg ansi-bold">]</span>
 
-<span class="ansi-red-fg">TypeError</span>: &#39;str_iterator&#39; object is not subscriptable</pre>
+<span class="ansi-red-intense-fg ansi-bold">TypeError</span>: &#39;str_iterator&#39; object is not subscriptable</pre>
 </div>
 </div>
 
@@ -14790,12 +14870,12 @@ a
 
 <div class="output_subarea output_text output_error">
 <pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">StopIteration</span>                             Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-51-4ce711c44abc&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>next<span class="ansi-blue-fg">(</span>iterator<span class="ansi-blue-fg">)</span>
+<span class="ansi-red-intense-fg ansi-bold">---------------------------------------------------------------------------</span>
+<span class="ansi-red-intense-fg ansi-bold">StopIteration</span>                             Traceback (most recent call last)
+<span class="ansi-green-intense-fg ansi-bold">&lt;ipython-input-51-4ce711c44abc&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-intense-fg ansi-bold">----&gt; 1</span><span class="ansi-yellow-intense-fg ansi-bold"> </span>next<span class="ansi-yellow-intense-fg ansi-bold">(</span>iterator<span class="ansi-yellow-intense-fg ansi-bold">)</span>
 
-<span class="ansi-red-fg">StopIteration</span>: </pre>
+<span class="ansi-red-intense-fg ansi-bold">StopIteration</span>: </pre>
 </div>
 </div>
 
@@ -14956,12 +15036,12 @@ a
 
 <div class="output_subarea output_text output_error">
 <pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">TypeError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-56-527f5709b48d&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>next<span class="ansi-blue-fg">(</span>range<span class="ansi-blue-fg">(</span><span class="ansi-cyan-fg">3</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-red-intense-fg ansi-bold">---------------------------------------------------------------------------</span>
+<span class="ansi-red-intense-fg ansi-bold">TypeError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-intense-fg ansi-bold">&lt;ipython-input-56-527f5709b48d&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-intense-fg ansi-bold">----&gt; 1</span><span class="ansi-yellow-intense-fg ansi-bold"> </span>next<span class="ansi-yellow-intense-fg ansi-bold">(</span>range<span class="ansi-yellow-intense-fg ansi-bold">(</span><span class="ansi-cyan-intense-fg ansi-bold">3</span><span class="ansi-yellow-intense-fg ansi-bold">)</span><span class="ansi-yellow-intense-fg ansi-bold">)</span>
 
-<span class="ansi-red-fg">TypeError</span>: &#39;range&#39; object is not an iterator</pre>
+<span class="ansi-red-intense-fg ansi-bold">TypeError</span>: &#39;range&#39; object is not an iterator</pre>
 </div>
 </div>
 
@@ -14972,7 +15052,7 @@ a
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Tím výčet zvláštností nekončí. <code>range</code> se stejně jako třeba seznam a na rozdíl od iterátorů průchodem nevyčerpá.</p>
+<p>Tím výčet zvláštností nekončí. <code>range</code>, stejně jako třeba seznam, se na rozdíl od iterátorů průchodem nevyčerpá.</p>
 
 </div>
 </div>
@@ -15217,7 +15297,7 @@ a
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>48</pre>
+<pre>24</pre>
 </div>
 
 </div>
@@ -15250,7 +15330,7 @@ a
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>80056</pre>
+<pre>40028</pre>
 </div>
 
 </div>

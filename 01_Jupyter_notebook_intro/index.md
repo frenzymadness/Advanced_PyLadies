@@ -121,7 +121,7 @@ Ještě kousek níže pak prázdnou buňku čekající na první obsah.
 Vpravo vedle nápisu „Python 3“ je malé, ale užitečné kolečko. Pokud nám během práce
 zčerná, znamená to, že je Python zaneprázdněn vykonáváním našich příkazů a je
 třeba počkat až jejich provádění dokončí, anebo, pokud jsi například omylem
-vytvořil nekonečný cyklus, že je třeba Python (neboli kernel) restartovat.
+vytvořila nekonečný cyklus, že je třeba Python (neboli kernel) restartovat.
 
 ## Základní použití
 
@@ -162,7 +162,7 @@ bude si moci snadno spustit tvůj kód kousek po kousku a sledovat, co se v n�
 děje. Mimoto je v hlavní nabídce i možnost `Kernel` > `Restart & Run All`, která
 restartuje Python a následně spustí všechny buňky v dokumentu.
 
-Všimni si, jak buňky měni barvu. Pokud je okraj buňky zelený, je možné ji
+Všimni si, jak buňky mění barvu. Pokud je okraj buňky zelený, je možné ji
 editovat a pomocí šipek se pohybovat v kódu, který obsahuje. Pokud je modrý, dá
 se šipkami přecházet mezi jednotlivými buňkami. Z modrého do zeleného režimu
 se dostaneme klávesou `Enter`, případně kliknutím do buňky. Naopak ze zeleného
